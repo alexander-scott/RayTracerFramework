@@ -43,9 +43,10 @@
 #define INFINITY 1e8
 #endif
 
-#define VIDEO_FPS 10 // The frames per second of the video
+#define VIDEO_FPS 30 // The frames per second of the video
 #define VIDEO_LENGTH 5 // The length in second of the video
 const std::string FOLDER_NAME = "Temp"; // The name of the folder that the .PPM frames will be temporarily saved to
+enum Axis { XAxis, YAxis, ZAxis };
 
 template<typename T>
 class Vec3
@@ -298,7 +299,6 @@ void render(const std::vector<Sphere> &spheres, int iteration)
 
 			Vec3f raydir(xx, yy, -1);
 			raydir.normalize();
-			*pixel = trace(Vec3f(0), raydir, spheres, 0);
 		}
 	}
 
@@ -413,8 +413,7 @@ void SmoothScaling()
 	}
 }
 
-
-Vec3f rotate_point(float cx, float cy, float angle, Vec3f p)
+Vec3f rotate_point(float cx, float cy, float cz, float angle, Vec3f p, Axis axis)
 {
 	float s = sin(angle);
 	float c = cos(angle);
@@ -422,14 +421,40 @@ Vec3f rotate_point(float cx, float cy, float angle, Vec3f p)
 	// translate point back to origin:
 	p.x -= cx;
 	p.y -= cy;
+	p.z -= cz;
 
-	// rotate point
-	float xnew = p.x * c - p.y * s;
-	float ynew = p.x * s + p.y * c;
+	float xnew;
+	float ynew;
+	float znew;
+
+	switch (axis)
+	{
+		case XAxis:
+			// X-Axis rotation
+			xnew = p.x;
+			ynew = p.y * c - p.z * s;
+			znew = p.y * s + p.z * c;
+			break;
+
+		case YAxis:
+			// Y-Axis rotation
+			xnew = p.z * s + p.x * c;
+			ynew = p.y;
+			znew = p.z * c - p.x * s;
+			break;
+
+		case ZAxis:
+			// Z-Axis rotation
+			xnew = p.x * c - p.y * s;
+			ynew = p.x * s + p.y * c;
+			znew = p.z;
+			break;
+	}
 
 	// translate point back:
 	p.x = xnew + cx;
 	p.y = ynew + cy;
+	p.z = znew + cz;
 	return p;
 }
 
@@ -440,16 +465,22 @@ void SolarSystem()
 
 	int totalFrames = VIDEO_FPS * VIDEO_LENGTH;
 
-	Sphere sun;
+	Sphere planet1;
+	Sphere planet2;
 
 	for (float r = 0; r <= totalFrames; r++)
 	{
-		// TODO: Rotate spheres around a point over each frame
-		Vec3f newPos = rotate_point(0, 0, ((r / totalFrames) * (360 / VIDEO_FPS)), Vec3f(1.00, 0.32, -20.36));
+		spheres.push_back(Sphere(Vec3f(0.0, 0, -60), 5, Vec3f(1.00, 0.32, 0.36), 1, 0.5));
 
-		Sphere newSun = Sphere(newPos, 1, Vec3f(1.00, 0.32, -20.36), 1, 0.5);
-		sun = newSun;
-		spheres.push_back(newSun);
+		Vec3f newPos = rotate_point(0, 0, -60, ((r / totalFrames) * (360 / VIDEO_FPS)), Vec3f(10.00, 0.32, -60), YAxis);
+		Sphere newPlanet = Sphere(newPos, 2, Vec3f(1.00, 0.32, -20.36), 1, 0.5);
+		planet1 = newPlanet;
+		spheres.push_back(newPlanet);
+
+		newPos = rotate_point(0, 0, -60, -((r / totalFrames) * (360 / VIDEO_FPS)), Vec3f(15.00, 0.32, -60), YAxis);
+		newPlanet = Sphere(newPos, 1, Vec3f(1.00, 0.32, -20.36), 1, 0.0);
+		planet2 = newPlanet;
+		spheres.push_back(newPlanet);
 
 		render(spheres, r);
 
@@ -502,8 +533,6 @@ int main(int argc, char **argv)
 	srand(13);
 	//BasicRender();
 	//SimpleShrinking();
-
-	void swapCase(char *name);
 
 	CreateFolder();
 
