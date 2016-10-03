@@ -27,10 +27,9 @@ e:\dropbox\university year 3\low level game programming\raytracerframework\raytr
 e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(370): warning C4305: 'argument': truncation from 'double' to 'float'
 e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(371): warning C4305: 'argument': truncation from 'double' to 'float'
 e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(372): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(390): warning C4305: 'argument': truncation from 'double' to 'float'
 e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(391): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(392): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(393): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(394): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(395): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(396): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(398): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   RayTracerSmall.vcxproj -> E:\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Debug\RayTracerSmall.exe
   RayTracerSmall.vcxproj -> E:\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Debug\RayTracerSmall.pdb (Full PDB)
