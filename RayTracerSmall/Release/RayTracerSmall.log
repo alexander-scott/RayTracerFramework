@@ -1,0 +1,39 @@
+﻿  main.cpp
+main.cpp(42): warning C4005: 'INFINITY': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(78): note: see previous definition of 'INFINITY'
+main.cpp(191): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(204): warning C4305: 'argument': truncation from 'double' to 'const float'
+main.cpp(218): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(284): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(291): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(292): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(325): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(326): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(327): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(328): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(344): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(345): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(346): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(347): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(352): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(353): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(354): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(355): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(359): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(360): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(361): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(362): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(366): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(367): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(368): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(369): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(387): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(388): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(389): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(390): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(391): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating code
+  All 261 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  RayTracerSmall.vcxproj -> E:\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Release\RayTracerSmall.exe
+  RayTracerSmall.vcxproj -> E:\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Release\RayTracerSmall.pdb (Full PDB)
