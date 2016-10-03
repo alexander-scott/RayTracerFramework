@@ -44,7 +44,7 @@
 #endif
 
 #define VIDEO_FPS 10 // The frames per second of the video
-#define VIDEO_LENGTH 2 // The length in second of the video
+#define VIDEO_LENGTH 5 // The length in second of the video
 const std::string FOLDER_NAME = "Temp"; // The name of the folder that the .PPM frames will be temporarily saved to
 
 template<typename T>
@@ -93,6 +93,8 @@ public:
 	float radius, radius2;                  /// sphere radius and radius^2
 	Vec3f surfaceColor, emissionColor;      /// surface color and emission (light)
 	float transparency, reflection;         /// surface transparency and reflectivity
+
+	Sphere() {}
 
 	Sphere(
 		const Vec3f &c,
@@ -277,7 +279,8 @@ void render(const std::vector<Sphere> &spheres, int iteration)
 	unsigned width = 640, height = 480;
 #else
 	// Recommended Production Resolution
-	unsigned width = 1920, height = 1080;
+	//unsigned width = 1920, height = 1080;
+	unsigned width = 640, height = 480;
 #endif
 
 	Vec3f *image = new Vec3f[width * height], *pixel = image;
@@ -410,6 +413,52 @@ void SmoothScaling()
 	}
 }
 
+
+Vec3f rotate_point(float cx, float cy, float angle, Vec3f p)
+{
+	float s = sin(angle);
+	float c = cos(angle);
+
+	// translate point back to origin:
+	p.x -= cx;
+	p.y -= cy;
+
+	// rotate point
+	float xnew = p.x * c - p.y * s;
+	float ynew = p.x * s + p.y * c;
+
+	// translate point back:
+	p.x = xnew + cx;
+	p.y = ynew + cy;
+	return p;
+}
+
+void SolarSystem() 
+{
+	std::vector<Sphere> spheres;
+	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
+
+	int totalFrames = VIDEO_FPS * VIDEO_LENGTH;
+
+	Sphere sun;
+
+	for (float r = 0; r <= totalFrames; r++)
+	{
+		// TODO: Rotate spheres around a point over each frame
+		Vec3f newPos = rotate_point(0, 0, ((r / totalFrames) * (360 / VIDEO_FPS)), Vec3f(1.00, 0.32, -20.36));
+
+		Sphere newSun = Sphere(newPos, 1, Vec3f(1.00, 0.32, -20.36), 1, 0.5);
+		sun = newSun;
+		spheres.push_back(newSun);
+
+		render(spheres, r);
+
+		std::cout << "Rendered and saved spheres" << r << ".ppm" << std::endl;
+
+		spheres.clear();
+	}
+}
+
 void CreateVideo()
 {
 	std::stringstream ss;
@@ -454,9 +503,12 @@ int main(int argc, char **argv)
 	//BasicRender();
 	//SimpleShrinking();
 
+	void swapCase(char *name);
+
 	CreateFolder();
 
-	SmoothScaling();
+	//SmoothScaling();
+	SolarSystem();
 
 #ifdef _DEBUG
 	CreateVideo(); // Remove this later
