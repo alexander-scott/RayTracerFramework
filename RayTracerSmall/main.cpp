@@ -43,11 +43,6 @@
 #define INFINITY 1e8
 #endif
 
-#define VIDEO_FPS 30 // The frames per second of the video
-#define VIDEO_LENGTH 5 // The length in second of the video
-const std::string FOLDER_NAME = "Temp"; // The name of the folder that the .PPM frames will be temporarily saved to
-enum Axis { XAxis, YAxis, ZAxis };
-
 template<typename T>
 class Vec3
 {
@@ -127,10 +122,12 @@ public:
 	}
 };
 
-//[comment]
-// This variable controls the maximum recursion depth
-//[/comment]
-#define MAX_RAY_DEPTH 5
+#define MAX_RAY_DEPTH 5 // This variable controls the maximum recursion depth
+#define VIDEO_FPS 60 // The frames per second of the video
+#define VIDEO_LENGTH 5 // The length in second of the video
+const std::string FOLDER_NAME = "Temp"; // The name of the folder that the .PPM frames will be temporarily saved to
+enum Axis { XAxis, YAxis, ZAxis };
+const Vec3f ORIGIN = Vec3f(0.0, 0, -200);
 
 float mix(const float &a, const float &b, const float &mix)
 {
@@ -280,8 +277,8 @@ void render(const std::vector<Sphere> &spheres, int iteration)
 	unsigned width = 640, height = 480;
 #else
 	// Recommended Production Resolution
-	//unsigned width = 1920, height = 1080;
-	unsigned width = 640, height = 480;
+	unsigned width = 1920, height = 1080;
+	//unsigned width = 640, height = 480;
 #endif
 
 	Vec3f *image = new Vec3f[width * height], *pixel = image;
@@ -299,6 +296,7 @@ void render(const std::vector<Sphere> &spheres, int iteration)
 
 			Vec3f raydir(xx, yy, -1);
 			raydir.normalize();
+			*pixel = trace(Vec3f(0, 10, 0), raydir, spheres, 0); // The Vec3f on this line is where the camera is positioned
 		}
 	}
 
@@ -321,7 +319,6 @@ void render(const std::vector<Sphere> &spheres, int iteration)
 	ofs.close();
 	delete[] image;
 }
-
 
 void BasicRender()
 {
@@ -413,15 +410,15 @@ void SmoothScaling()
 	}
 }
 
-Vec3f rotate_point(float cx, float cy, float cz, float angle, Vec3f p, Axis axis)
+Vec3f rotate_point(Vec3f o, float angle, Vec3f p, Axis axis)
 {
 	float s = sin(angle);
 	float c = cos(angle);
 
 	// translate point back to origin:
-	p.x -= cx;
-	p.y -= cy;
-	p.z -= cz;
+	p.x -= o.x;
+	p.y -= o.y;
+	p.z -= o.z;
 
 	float xnew;
 	float ynew;
@@ -452,9 +449,9 @@ Vec3f rotate_point(float cx, float cy, float cz, float angle, Vec3f p, Axis axis
 	}
 
 	// translate point back:
-	p.x = xnew + cx;
-	p.y = ynew + cy;
-	p.z = znew + cz;
+	p.x = xnew + o.x;
+	p.y = ynew + o.y;
+	p.z = znew + o.z;
 	return p;
 }
 
@@ -465,22 +462,40 @@ void SolarSystem()
 
 	int totalFrames = VIDEO_FPS * VIDEO_LENGTH;
 
-	Sphere planet1;
-	Sphere planet2;
-
 	for (float r = 0; r <= totalFrames; r++)
 	{
-		spheres.push_back(Sphere(Vec3f(0.0, 0, -60), 5, Vec3f(1.00, 0.32, 0.36), 1, 0.5));
+		// Sun
+		spheres.push_back(Sphere(ORIGIN, 15, Vec3f(1, 0.27, 0.0), 1, 0.5));
 
-		Vec3f newPos = rotate_point(0, 0, -60, ((r / totalFrames) * (360 / VIDEO_FPS)), Vec3f(10.00, 0.32, -60), YAxis);
-		Sphere newPlanet = Sphere(newPos, 2, Vec3f(1.00, 0.32, -20.36), 1, 0.5);
-		planet1 = newPlanet;
-		spheres.push_back(newPlanet);
+		/* 
+			How to use rotate_point:
+			First vector is the point to rotate around, aka the origin.
+			Next value is essentially how fast do you want to rotate around this point. Equation is ((r / totalFrames) * (ROTATION_SPEED)).
+			(ROTATION_SPEED should be a value from 1 to 10. 1 being very slow, 10 being very fast.)
+			The next vector is the start point of the rotation. Or a better way to look at is the objects current position. 
+			The final enum is which axis you want the rotation to take place in. Can't currently do any arbitrary rotation.
+		*/
 
-		newPos = rotate_point(0, 0, -60, -((r / totalFrames) * (360 / VIDEO_FPS)), Vec3f(15.00, 0.32, -60), YAxis);
-		newPlanet = Sphere(newPos, 1, Vec3f(1.00, 0.32, -20.36), 1, 0.0);
-		planet2 = newPlanet;
-		spheres.push_back(newPlanet);
+		// Mercury
+		Vec3f newPos = rotate_point(ORIGIN, ((r / totalFrames) * (6)), Vec3f(20.00, 0.32, ORIGIN.z), YAxis);
+		spheres.push_back(Sphere(newPos, 2, Vec3f(0.75, 0.75, 0.75), 1, 0.5));
+
+		// Venus
+		newPos = rotate_point(ORIGIN, ((r / totalFrames) * (4)), Vec3f(-30.00, 0.32, ORIGIN.z), YAxis);
+		spheres.push_back(Sphere(newPos, 3, Vec3f(0.83, 0.92, 0.82), 1, 0.5));
+
+		// Earth
+		newPos = rotate_point(ORIGIN, ((r / totalFrames) * (3)), Vec3f(0, 0.32, ORIGIN.z + 40), YAxis);
+		Sphere earth = Sphere(newPos, 3.5, Vec3f(0.63, 0.90, 0.94), 1, 0.5);
+		spheres.push_back(earth);
+
+		// Moon
+		newPos = rotate_point(earth.center, ((r / totalFrames) * (10)), Vec3f(earth.center.x, earth.center.y, earth.center.z + 5), YAxis);
+		spheres.push_back(Sphere(newPos, 1, Vec3f(0.75, 0.75, 0.75), 1, 0.5));
+
+		// Mars
+		newPos = rotate_point(ORIGIN, ((r / totalFrames) * (5)), Vec3f(0, 0.32, ORIGIN.z - 50.00), YAxis);
+		spheres.push_back(Sphere(newPos, 3, Vec3f(1.00, 0.32, -20.36), 1, 0.5));
 
 		render(spheres, r);
 
@@ -496,6 +511,8 @@ void CreateVideo()
 	ss << "ffmpeg -y -f image2 -r " << VIDEO_FPS << " -i ./" << FOLDER_NAME << "/spheres%d.ppm -b 600k ./out.mp4";
 
 	system(ss.str().c_str());
+
+	system("out.mp4");
 }
 
 void CreateFolder() 
@@ -531,12 +548,13 @@ int main(int argc, char **argv)
 {
 	// This sample only allows one choice per program execution. Feel free to improve upon this
 	srand(13);
-	//BasicRender();
-	//SimpleShrinking();
 
 	CreateFolder();
 
+	//BasicRender();
+	//SimpleShrinking();
 	//SmoothScaling();
+
 	SolarSystem();
 
 #ifdef _DEBUG

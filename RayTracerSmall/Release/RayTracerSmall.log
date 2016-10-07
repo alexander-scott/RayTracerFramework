@@ -1,46 +1,50 @@
 ﻿  main.cpp
 main.cpp(43): warning C4005: 'INFINITY': macro redefinition
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(78): note: see previous definition of 'INFINITY'
-main.cpp(196): warning C4305: 'initializing': truncation from 'double' to 'float'
-main.cpp(209): warning C4305: 'argument': truncation from 'double' to 'const float'
-main.cpp(223): warning C4305: 'initializing': truncation from 'double' to 'float'
-main.cpp(290): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(297): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(298): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(332): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(333): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(334): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(335): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(351): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(352): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(353): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(354): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(359): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(360): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(361): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(193): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(206): warning C4305: 'argument': truncation from 'double' to 'const float'
+main.cpp(220): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(287): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(294): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(295): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(328): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(329): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(330): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(331): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(347): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(348): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(349): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(350): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(355): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(356): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(357): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(358): warning C4305: 'argument': truncation from 'double' to 'float'
 main.cpp(362): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(366): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(367): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(368): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(363): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(364): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(365): warning C4305: 'argument': truncation from 'double' to 'float'
 main.cpp(369): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(373): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(374): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(375): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(376): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(399): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(405): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(406): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(408): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(474): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(476): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(477): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(481): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(482): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(486): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(370): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(371): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(372): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(395): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(401): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(402): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(404): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(468): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(480): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(484): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(485): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(488): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(489): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(497): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(497): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(498): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(500): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Generating code
-  2 of 586 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+  4 of 586 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+    21 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   RayTracerSmall.vcxproj -> E:\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Release\RayTracerSmall.exe
   RayTracerSmall.vcxproj -> E:\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Release\RayTracerSmall.pdb (Full PDB)
