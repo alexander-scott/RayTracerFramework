@@ -1,26 +1,3 @@
-// [header]
-// A very basic raytracer example.
-// [/header]
-// [compile]
-// c++ -o raytracer -O3 -Wall raytracer.cpp
-// [/compile]
-// [ignore]
-// Copyright (C) 2012  www.scratchapixel.com
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
-// [/ignore]
-
 #include <stdlib.h>
 #include <cstdio>
 #include <cmath>
@@ -35,13 +12,11 @@
 #include <sstream>
 #include <string.h>
 
-#if defined __linux__ || defined __APPLE__
-// "Compiled for Linux
-#else
-// Windows doesn't define these values by default, Linux does
-#define M_PI 3.141592653589793
-#define INFINITY 1e8
-#endif
+// Time precision
+#include <chrono>
+
+// Threading
+#include <thread>
 
 template<typename T>
 class Vec3
@@ -122,12 +97,31 @@ public:
 	}
 };
 
+#if defined __linux__ || defined __APPLE__
+// "Compiled for Linux
+#else
+// Windows doesn't define these values by default, Linux does
+#define M_PI 3.141592653589793
+#define INFINITY 1e8
+#endif
+
 #define MAX_RAY_DEPTH 5 // This variable controls the maximum recursion depth
 #define VIDEO_FPS 60 // The frames per second of the video
 #define VIDEO_LENGTH 5 // The length in second of the video
 const std::string FOLDER_NAME = "Temp"; // The name of the folder that the .PPM frames will be temporarily saved to
 enum Axis { XAxis, YAxis, ZAxis };
 const Vec3f ORIGIN = Vec3f(0.0, 0, -200);
+
+// Start and end timers
+std::chrono::time_point<std::chrono::system_clock> start;
+std::chrono::time_point<std::chrono::system_clock> end;
+std::chrono::duration<double> total_elapsed_time;
+
+// Thead pool
+static const int num_threads = 10;
+
+// If true the code will go down the threading route
+bool performThreading = true;
 
 float mix(const float &a, const float &b, const float &mix)
 {
@@ -270,15 +264,17 @@ Vec3f trace(
 // trace it and return a color. If the ray hits a sphere, we return the color of the
 // sphere at the intersection point, else we return the background color.
 //[/comment]
-void render(const std::vector<Sphere> &spheres, int iteration)
+void render(const std::vector<Sphere> &spheres, int iteration, int threadNumber)
 {
+	start = std::chrono::system_clock::now();
+
 #ifdef _DEBUG 
 	// Recommended Testing Resolution
 	unsigned width = 640, height = 480;
 #else
 	// Recommended Production Resolution
-	unsigned width = 1920, height = 1080;
-	//unsigned width = 640, height = 480;
+	//unsigned width = 1920, height = 1080;
+	unsigned width = 640, height = 480;
 #endif
 
 	Vec3f *image = new Vec3f[width * height], *pixel = image;
@@ -318,95 +314,18 @@ void render(const std::vector<Sphere> &spheres, int iteration)
 
 	ofs.close();
 	delete[] image;
-}
 
-void BasicRender()
-{
-	std::vector<Sphere> spheres;
-	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
+	end = std::chrono::system_clock::now();
+	std::chrono::duration<double> elapsed_time = end - start;
+	total_elapsed_time += elapsed_time;
 
-	spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-	spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 4, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // The radius paramter is the value we will change
-	spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-	spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-	
-	// This creates a file, titled 1.ppm in the current working directory
-	render(spheres, 1);
-
-}
-
-void SimpleShrinking()
-{
-	std::vector<Sphere> spheres;
-	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
-
-	for (int i = 0; i < 4; i++)
+	if (threadNumber != 0)
 	{
-		if (i == 0)
-		{
-			spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-			spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 4, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // The radius paramter is the value we will change
-			spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-			spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-
-		}
-		else if (i == 1)
-		{
-			spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-			spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 3, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
-			spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-			spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-		}
-		else if (i == 2)
-		{
-			spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-			spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 2, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
-			spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-			spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-		}
-		else if (i == 3)
-		{
-			spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-			spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 1, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
-			spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-			spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-		}
-
-		render(spheres, i);
-		// Dont forget to clear the Vector holding the spheres.
-		spheres.clear();
+		std::cout << "Finished image render #" << iteration << " in " << elapsed_time.count() << " on thread: " << threadNumber << std::endl;
 	}
-}
-
-void SmoothScaling()
-{
-	std::vector<Sphere> spheres;
-	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
-
-	int totalFrames = VIDEO_FPS * VIDEO_LENGTH;
-
-	for (float r = 0; r <= totalFrames; r++)
+	else 
 	{
-		// TODO: Rotate spheres around a point over each frame
-
-		// Moving sphere. (r / totalFrames) changes radius over time
-		spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 
-			r / totalFrames, 
-			Vec3f(1.00, 0.32, 0.36), 
-			1, 
-			0.5));
-
-		// Static spheres
-		//spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-		spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-		spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-
-		render(spheres, r);
-
-		std::cout << "Rendered and saved spheres" << r << ".ppm" << std::endl;
-
-		// Dont forget to clear the Vector holding the spheres.
-		spheres.clear();
+		std::cout << "Finished image render #" << iteration << " in " << elapsed_time.count() << std::endl;
 	}
 }
 
@@ -455,14 +374,20 @@ Vec3f rotate_point(Vec3f o, float angle, Vec3f p, Axis axis)
 	return p;
 }
 
-void SolarSystem() 
+void SolarSystem(int start, int finish, int threadNumber)
 {
 	std::vector<Sphere> spheres;
 	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
 
 	int totalFrames = VIDEO_FPS * VIDEO_LENGTH;
 
-	for (float r = 0; r <= totalFrames; r++)
+	if (!performThreading)
+	{
+		start = 0;
+		finish = totalFrames;
+	}
+
+	for (float r = start; r <= totalFrames && r <= finish; r++)
 	{
 		// Sun
 		spheres.push_back(Sphere(ORIGIN, 15, Vec3f(1, 0.27, 0.0), 1, 0.5));
@@ -497,11 +422,34 @@ void SolarSystem()
 		newPos = rotate_point(ORIGIN, ((r / totalFrames) * (5)), Vec3f(0, 0.32, ORIGIN.z - 50.00), YAxis);
 		spheres.push_back(Sphere(newPos, 3, Vec3f(1.00, 0.32, -20.36), 1, 0.5));
 
-		render(spheres, r);
-
-		std::cout << "Rendered and saved spheres" << r << ".ppm" << std::endl;
-
+		if (performThreading)
+		{
+			render(spheres, r, threadNumber);
+		}
+		else 
+		{
+			render(spheres, r, 0);
+		}
+		
 		spheres.clear();
+	}
+}
+
+void DoThreading() 
+{
+	std::thread threadPool[num_threads];
+
+	int difference = (VIDEO_FPS * VIDEO_LENGTH) / num_threads;
+
+	for (int i = 0; i < num_threads; ++i)
+	{
+		threadPool[i] = std::thread(SolarSystem, i * difference, i * difference + difference, i);
+	}
+
+	//Join the threads with the main thread
+	for (int i = 0; i < num_threads; ++i)
+	{
+		threadPool[i].join();
 	}
 }
 
@@ -510,7 +458,21 @@ void CreateVideo()
 	std::stringstream ss;
 	ss << "ffmpeg -y -f image2 -r " << VIDEO_FPS << " -i ./" << FOLDER_NAME << "/spheres%d.ppm -b 600k ./out.mp4";
 
+	start = std::chrono::system_clock::now();
+
 	system(ss.str().c_str());
+
+	end = std::chrono::system_clock::now();
+
+	std::chrono::duration<double> elapsed_time = end - start;
+	total_elapsed_time += elapsed_time;
+	std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+	std::cout << "**********************" << std::endl;
+	std::cout << "Finished video render in " << elapsed_time.count() << std::endl;
+	std::cout << "**********************" << std::endl;
+	std::cout << "**********************" << std::endl;
+	std::cout << "Total Render Time: " << total_elapsed_time.count() << std::endl;
+	std::cout << "**********************" << std::endl;
 
 	system("out.mp4");
 }
@@ -551,11 +513,14 @@ int main(int argc, char **argv)
 
 	CreateFolder();
 
-	//BasicRender();
-	//SimpleShrinking();
-	//SmoothScaling();
-
-	SolarSystem();
+	if (performThreading)
+	{
+		DoThreading();
+	}
+	else 
+	{
+		SolarSystem(0, 0, 0);
+	}
 
 #ifdef _DEBUG
 	CreateVideo(); // Remove this later
@@ -568,3 +533,100 @@ int main(int argc, char **argv)
 	return 0;
 }
 
+
+
+
+
+
+/*
+void BasicRender()
+{
+std::vector<Sphere> spheres;
+// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
+
+spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
+spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 4, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // The radius paramter is the value we will change
+spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
+spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
+
+// This creates a file, titled 1.ppm in the current working directory
+render(spheres, 1);
+
+}
+
+void SimpleShrinking()
+{
+std::vector<Sphere> spheres;
+// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
+
+for (int i = 0; i < 4; i++)
+{
+if (i == 0)
+{
+spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
+spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 4, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // The radius paramter is the value we will change
+spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
+spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
+
+}
+else if (i == 1)
+{
+spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
+spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 3, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
+spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
+spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
+}
+else if (i == 2)
+{
+spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
+spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 2, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
+spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
+spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
+}
+else if (i == 3)
+{
+spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
+spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 1, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
+spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
+spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
+}
+
+render(spheres, i);
+// Dont forget to clear the Vector holding the spheres.
+spheres.clear();
+}
+}
+
+void SmoothScaling()
+{
+std::vector<Sphere> spheres;
+// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
+
+int totalFrames = VIDEO_FPS * VIDEO_LENGTH;
+
+for (float r = 0; r <= totalFrames; r++)
+{
+// TODO: Rotate spheres around a point over each frame
+
+// Moving sphere. (r / totalFrames) changes radius over time
+spheres.push_back(Sphere(Vec3f(0.0, 0, -20),
+r / totalFrames,
+Vec3f(1.00, 0.32, 0.36),
+1,
+0.5));
+
+// Static spheres
+//spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
+spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
+spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
+
+render(spheres, r);
+
+std::cout << "Rendered and saved spheres" << r << ".ppm" << std::endl;
+
+// Dont forget to clear the Vector holding the spheres.
+spheres.clear();
+}
+}
+
+*/
