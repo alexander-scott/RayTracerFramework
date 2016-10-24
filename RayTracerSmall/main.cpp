@@ -97,6 +97,19 @@ public:
 	}
 };
 
+struct DriverInfo {
+	float framerate; // The frames per second of the video
+	int width;
+	int height;
+	int duration; // The length in second of the video
+	int maxRayDepth; // This variable controls the maximum recursion depth
+	std::string folderName; // The name of the folder that the .PPM frames will be temporarily saved to
+
+	float totFrames;
+};
+
+DriverInfo config;
+
 #if defined __linux__ || defined __APPLE__
 // "Compiled for Linux
 #else
@@ -105,10 +118,6 @@ public:
 #define INFINITY 1e8
 #endif
 
-#define MAX_RAY_DEPTH 5 // This variable controls the maximum recursion depth
-#define VIDEO_FPS 60 // The frames per second of the video
-#define VIDEO_LENGTH 5 // The length in second of the video
-const std::string FOLDER_NAME = "Temp"; // The name of the folder that the .PPM frames will be temporarily saved to
 enum Axis { XAxis, YAxis, ZAxis };
 const Vec3f ORIGIN = Vec3f(0.0, 0, -200);
 
@@ -149,18 +158,18 @@ Vec3f trace(
 	const Sphere* sphere = NULL;
 
 	// find intersection of this ray with the sphere in the scene
-	for (unsigned i = 0; i < spheres.size(); ++i) 
+	for (unsigned i = 0; i < spheres.size(); ++i)
 	{
 		float t0 = INFINITY, t1 = INFINITY;
 
-		if (spheres[i].intersect(rayorig, raydir, t0, t1)) 
+		if (spheres[i].intersect(rayorig, raydir, t0, t1))
 		{
-			if (t0 < 0) 
-			{ 
-				t0 = t1; 
+			if (t0 < 0)
+			{
+				t0 = t1;
 			}
 
-			if (t0 < tnear) 
+			if (t0 < tnear)
 			{
 				tnear = t0;
 				sphere = &spheres[i];
@@ -169,9 +178,9 @@ Vec3f trace(
 	}
 
 	// if there's no intersection return black or background color
-	if (!sphere) 
-	{ 
-		return Vec3f(2); 
+	if (!sphere)
+	{
+		return Vec3f(2);
 	}
 
 	Vec3f surfaceColor = 0; // color of the ray/surfaceof the object intersected by the ray
@@ -187,12 +196,12 @@ Vec3f trace(
 	float bias = 1e-4; // add some bias to the point from which we will be tracing
 	bool inside = false;
 
-	if (raydir.dot(nhit) > 0) 
-	{ 
-		nhit = -nhit, inside = true; 
+	if (raydir.dot(nhit) > 0)
+	{
+		nhit = -nhit, inside = true;
 	}
 
-	if ((sphere->transparency > 0 || sphere->reflection > 0) && depth < MAX_RAY_DEPTH) 
+	if ((sphere->transparency > 0 || sphere->reflection > 0) && depth < config.maxRayDepth)
 	{
 		float facingratio = -raydir.dot(nhit);
 
@@ -209,7 +218,7 @@ Vec3f trace(
 		Vec3f refraction = 0;
 
 		// if the sphere is also transparent compute refraction ray (transmission)
-		if (sphere->transparency) 
+		if (sphere->transparency)
 		{
 			float ior = 1.1, eta = (inside) ? ior : 1 / ior; // are we inside or outside the surface?
 			float cosi = -nhit.dot(raydir);
@@ -225,24 +234,24 @@ Vec3f trace(
 			reflection * fresneleffect +
 			refraction * (1 - fresneleffect) * sphere->transparency) * sphere->surfaceColor;
 	}
-	else 
+	else
 	{
 		// it's a diffuse object, no need to raytrace any further
-		for (unsigned i = 0; i < spheres.size(); ++i) 
+		for (unsigned i = 0; i < spheres.size(); ++i)
 		{
-			if (spheres[i].emissionColor.x > 0) 
+			if (spheres[i].emissionColor.x > 0)
 			{
 				// this is a light
 				Vec3f transmission = 1;
 				Vec3f lightDirection = spheres[i].center - phit;
 				lightDirection.normalize();
 
-				for (unsigned j = 0; j < spheres.size(); ++j) 
+				for (unsigned j = 0; j < spheres.size(); ++j)
 				{
-					if (i != j) 
+					if (i != j)
 					{
 						float t0, t1;
-						if (spheres[j].intersect(phit + nhit * bias, lightDirection, t0, t1)) 
+						if (spheres[j].intersect(phit + nhit * bias, lightDirection, t0, t1))
 						{
 							transmission = 0;
 							break;
@@ -283,29 +292,29 @@ void render(const std::vector<Sphere> &spheres, int iteration, int threadNumber)
 	float angle = tan(M_PI * 0.5 * fov / 180.);
 
 	// Trace rays
-	for (unsigned y = 0; y < height; ++y) 
+	for (unsigned y = 0; y < height; ++y)
 	{
-		for (unsigned x = 0; x < width; ++x, ++pixel) 
+		for (unsigned x = 0; x < width; ++x, ++pixel)
 		{
 			float xx = (2 * ((x + 0.5) * invWidth) - 1) * angle * aspectratio;
 			float yy = (1 - 2 * ((y + 0.5) * invHeight)) * angle;
 
 			Vec3f raydir(xx, yy, -1);
 			raydir.normalize();
-			*pixel = trace(Vec3f(0, 10, 0), raydir, spheres, 0); // The Vec3f on this line is where the camera is positioned
+			*pixel = trace(Vec3f(0, 20, 0), raydir, spheres, 0); // The Vec3f on this line is where the camera is positioned
 		}
 	}
 
 	// Save result to a PPM image (keep these flags if you compile under Windows)
 	std::stringstream ss;
-	ss << "./" << FOLDER_NAME << "/spheres" << iteration << ".ppm";
+	ss << "./" << config.folderName << "/spheres" << iteration << ".ppm";
 	std::string tempString = ss.str();
 	char* filename = (char*)tempString.c_str();
 
 	std::ofstream ofs(filename, std::ios::out | std::ios::binary);
 	ofs << "P6\n" << width << " " << height << "\n255\n";
 
-	for (unsigned i = 0; i < width * height; ++i) 
+	for (unsigned i = 0; i < width * height; ++i)
 	{
 		ofs << (unsigned char)(std::min(float(1), image[i].x) * 255) <<
 			(unsigned char)(std::min(float(1), image[i].y) * 255) <<
@@ -323,7 +332,7 @@ void render(const std::vector<Sphere> &spheres, int iteration, int threadNumber)
 	{
 		std::cout << "Finished image render #" << iteration << " in " << elapsed_time.count() << " on thread: " << threadNumber << std::endl;
 	}
-	else 
+	else
 	{
 		std::cout << "Finished image render #" << iteration << " in " << elapsed_time.count() << std::endl;
 	}
@@ -345,26 +354,26 @@ Vec3f rotate_point(Vec3f o, float angle, Vec3f p, Axis axis)
 
 	switch (axis)
 	{
-		case XAxis:
-			// X-Axis rotation
-			xnew = p.x;
-			ynew = p.y * c - p.z * s;
-			znew = p.y * s + p.z * c;
-			break;
+	case XAxis:
+		// X-Axis rotation
+		xnew = p.x;
+		ynew = p.y * c - p.z * s;
+		znew = p.y * s + p.z * c;
+		break;
 
-		case YAxis:
-			// Y-Axis rotation
-			xnew = p.z * s + p.x * c;
-			ynew = p.y;
-			znew = p.z * c - p.x * s;
-			break;
+	case YAxis:
+		// Y-Axis rotation
+		xnew = p.z * s + p.x * c;
+		ynew = p.y;
+		znew = p.z * c - p.x * s;
+		break;
 
-		case ZAxis:
-			// Z-Axis rotation
-			xnew = p.x * c - p.y * s;
-			ynew = p.x * s + p.y * c;
-			znew = p.z;
-			break;
+	case ZAxis:
+		// Z-Axis rotation
+		xnew = p.x * c - p.y * s;
+		ynew = p.x * s + p.y * c;
+		znew = p.z;
+		break;
 	}
 
 	// translate point back:
@@ -379,67 +388,65 @@ void SolarSystem(int start, int finish, int threadNumber)
 	std::vector<Sphere> spheres;
 	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
 
-	int totalFrames = VIDEO_FPS * VIDEO_LENGTH;
-
 	if (!performThreading)
 	{
 		start = 0;
-		finish = totalFrames;
+		finish = config.totFrames;
 	}
 
-	for (float r = start; r <= totalFrames && r <= finish; r++)
+	for (float r = start; r <= config.totFrames && r <= finish; r++)
 	{
 		// Sun
 		spheres.push_back(Sphere(ORIGIN, 15, Vec3f(1, 0.27, 0.0), 1, 0.5));
 
-		/* 
-			How to use rotate_point:
-			First vector is the point to rotate around, aka the origin.
-			Next value is essentially how fast do you want to rotate around this point. Equation is ((r / totalFrames) * (ROTATION_SPEED)).
-			(ROTATION_SPEED should be a value from 1 to 10. 1 being very slow, 10 being very fast.)
-			The next vector is the start point of the rotation. Or a better way to look at is the objects current position. 
-			The final enum is which axis you want the rotation to take place in. Can't currently do any arbitrary rotation.
+		/*
+		How to use rotate_point:
+		First vector is the point to rotate around, aka the origin.
+		Next value is essentially how fast do you want to rotate around this point. Equation is ((r / totalFrames) * (ROTATION_SPEED)).
+		(ROTATION_SPEED should be a value from 1 to 10. 1 being very slow, 10 being very fast.)
+		The next vector is the start point of the rotation. Or a better way to look at is the objects current position.
+		The final enum is which axis you want the rotation to take place in. Can't currently do any arbitrary rotation.
 		*/
 
 		// Mercury
-		Vec3f newPos = rotate_point(ORIGIN, ((r / totalFrames) * (6)), Vec3f(20.00, 0.32, ORIGIN.z), YAxis);
+		Vec3f newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (6)), Vec3f(20.00, 0.32, ORIGIN.z), YAxis);
 		spheres.push_back(Sphere(newPos, 2, Vec3f(0.75, 0.75, 0.75), 1, 0.5));
 
 		// Venus
-		newPos = rotate_point(ORIGIN, ((r / totalFrames) * (4)), Vec3f(-30.00, 0.32, ORIGIN.z), YAxis);
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (4)), Vec3f(-30.00, 0.32, ORIGIN.z), YAxis);
 		spheres.push_back(Sphere(newPos, 3, Vec3f(0.83, 0.92, 0.82), 1, 0.5));
 
 		// Earth
-		newPos = rotate_point(ORIGIN, ((r / totalFrames) * (3)), Vec3f(0, 0.32, ORIGIN.z + 40), YAxis);
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (3)), Vec3f(0, 0.32, ORIGIN.z + 40), YAxis);
 		Sphere earth = Sphere(newPos, 3.5, Vec3f(0.63, 0.90, 0.94), 1, 0.5);
 		spheres.push_back(earth);
 
 		// Moon
-		newPos = rotate_point(earth.center, ((r / totalFrames) * (10)), Vec3f(earth.center.x, earth.center.y, earth.center.z + 5), YAxis);
+		newPos = rotate_point(earth.center, ((r / config.totFrames) * (10)), Vec3f(earth.center.x, earth.center.y, earth.center.z + 5), YAxis);
 		spheres.push_back(Sphere(newPos, 1, Vec3f(0.75, 0.75, 0.75), 1, 0.5));
 
 		// Mars
-		newPos = rotate_point(ORIGIN, ((r / totalFrames) * (5)), Vec3f(0, 0.32, ORIGIN.z - 50.00), YAxis);
-		spheres.push_back(Sphere(newPos, 3, Vec3f(1.00, 0.32, -20.36), 1, 0.5));
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (5)), Vec3f(0, 0.32, ORIGIN.z - 50.00), YAxis);
+		spheres.push_back(Sphere(newPos, 3, Vec3f(1.00, 0.32, -20.36), 0.5, 0.5));
 
 		if (performThreading)
 		{
 			render(spheres, r, threadNumber);
 		}
-		else 
+		else
 		{
 			render(spheres, r, 0);
 		}
-		
+
 		spheres.clear();
 	}
 }
 
-void DoThreading() 
+void DoThreading()
 {
 	std::thread threadPool[num_threads];
 
-	int difference = (VIDEO_FPS * VIDEO_LENGTH) / num_threads;
+	int difference = (config.totFrames) / num_threads;
 
 	for (int i = 0; i < num_threads; ++i)
 	{
@@ -456,7 +463,7 @@ void DoThreading()
 void CreateVideo()
 {
 	std::stringstream ss;
-	ss << "ffmpeg -y -f image2 -r " << VIDEO_FPS << " -i ./" << FOLDER_NAME << "/spheres%d.ppm -b 600k ./out.mp4";
+	ss << "ffmpeg -y -f image2 -r " << config.framerate << " -i ./" << config.folderName << "/spheres%d.ppm -b 600k ./out.mp4";
 
 	start = std::chrono::system_clock::now();
 
@@ -477,28 +484,80 @@ void CreateVideo()
 	system("out.mp4");
 }
 
-void CreateFolder() 
+void CreateFolder()
 {
 	namespace fs = std::experimental::filesystem;
 	std::stringstream ss;
-	ss << "./" << FOLDER_NAME;
+	ss << "./" << config.folderName;
 
 	if (!fs::exists(ss.str().c_str())) // Check if temp folder exists
-	{ 
+	{
 		fs::create_directory(ss.str().c_str()); // Create temp folder
 	}
 }
 
-void RemoveFolder() 
+void RemoveFolder()
 {
 	namespace fs = std::experimental::filesystem;
 	std::stringstream ss;
-	ss << "./" << FOLDER_NAME;
+	ss << "./" << config.folderName;
 
 	if (fs::exists(ss.str().c_str())) // Check if temp folder exists
-	{ 
+	{
 		fs::remove_all(ss.str().c_str()); // Remove temp folder
 	}
+}
+
+void GetConfig()
+{
+	std::ifstream infile("./input.txt");
+	std::string line;
+	std::size_t found = line.find("framerate");
+
+	while (std::getline(infile, line, '\n'))
+	{
+		if (line.compare(0, 9, "framerate") == 0)
+		{
+			line.erase(0, 11);
+			int fr = std::stoi(line);
+			config.framerate = fr;
+		}
+		else if (line.compare(0, 5, "width") == 0)
+		{
+			line.erase(0, 7);
+			int width = std::stoi(line);
+			config.width = width;
+		}
+		else if (line.compare(0, 6, "height") == 0)
+		{
+			line.erase(0, 8);
+			int height = std::stoi(line);
+			config.height = height;
+		}
+		else if (line.compare(0, 8, "duration") == 0)
+		{
+			line.erase(0, 10);
+			config.duration = stoi(line);
+		}
+		else if (line.compare(0, 11, "maxRayDepth") == 0)
+		{
+			line.erase(0, 13);
+			int mrd = std::stoi(line);
+			config.maxRayDepth = mrd;
+		}
+		else if (line.compare(0, 10, "folderName") == 0)
+		{
+			line.erase(0, 12);
+			config.folderName = line;
+		}
+	}
+
+	if (config.folderName == "")
+	{
+		config.folderName = "Temp";
+	}
+
+	config.totFrames = config.framerate * config.duration;
 }
 
 //[comment]
@@ -511,13 +570,15 @@ int main(int argc, char **argv)
 	// This sample only allows one choice per program execution. Feel free to improve upon this
 	srand(13);
 
+	GetConfig();
+
 	CreateFolder();
 
 	if (performThreading)
 	{
 		DoThreading();
 	}
-	else 
+	else
 	{
 		SolarSystem(0, 0, 0);
 	}

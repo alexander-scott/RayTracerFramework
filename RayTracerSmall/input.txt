@@ -1,0 +1,6 @@
+framerate: 60
+width: 640
+height: 480
+duration: 5
+maxRayDepth: 5
+folderName: Temp
