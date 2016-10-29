@@ -1,31 +1,31 @@
 ﻿  main.cpp
-main.cpp(118): warning C4005: 'INFINITY': macro redefinition
+main.cpp(125): warning C4005: 'INFINITY': macro redefinition
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(78): note: see previous definition of 'INFINITY'
-main.cpp(196): warning C4305: 'initializing': truncation from 'double' to 'float'
-main.cpp(209): warning C4305: 'argument': truncation from 'double' to 'const float'
-main.cpp(223): warning C4305: 'initializing': truncation from 'double' to 'float'
-main.cpp(292): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(203): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(216): warning C4305: 'argument': truncation from 'double' to 'const float'
+main.cpp(230): warning C4305: 'initializing': truncation from 'double' to 'float'
 main.cpp(299): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(300): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(394): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-main.cpp(397): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-main.cpp(400): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(412): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(416): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(417): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(420): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(421): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(429): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-main.cpp(429): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(430): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(434): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(438): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(449): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-main.cpp(523): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+main.cpp(306): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(307): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(401): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+main.cpp(404): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+main.cpp(407): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(419): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(423): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(424): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(427): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(428): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(436): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(436): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(437): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(441): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(445): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(456): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+main.cpp(530): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Generating code
-  701 of 708 functions (99.0%) were compiled, the rest were copied from previous compilation.
-    34 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+  94 of 708 functions (13.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    9 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Release\RayTracerSmall.exe
   RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Release\RayTracerSmall.pdb (Full PDB)

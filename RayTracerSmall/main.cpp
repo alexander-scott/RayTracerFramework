@@ -7,6 +7,13 @@
 #include <cassert>
 #include <filesystem>
 
+// Open CL
+//#define __NO_STD_VECTOR // Use cl::vector instead of STL version
+//#include <CL/cl.hpp>
+//#include <cstdlib>
+//#include <string>
+//#include <iterator>
+
 // Windows only
 #include <algorithm>
 #include <sstream>
