@@ -1,31 +1,1160 @@
 ﻿  main.cpp
-main.cpp(125): warning C4005: 'INFINITY': macro redefinition
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<T,N>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1038): note: see reference to class template instantiation 'cl::vector<T,N>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<T,N>': was declared deprecated
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<T,N>': was declared deprecated
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<T,N>': was declared deprecated
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<T,N>': was declared deprecated
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(909): warning C4996: 'cl::vector<T,N>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(995): note: see reference to class template instantiation 'cl::vector<T,N>::iterator' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(917): warning C4996: 'cl::vector<T,N>': was declared deprecated
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(942): warning C4996: 'cl::vector<T,N>': was declared deprecated
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(949): warning C4996: 'cl::vector<T,N>': was declared deprecated
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1138): warning C4996: 'cl::vector<T,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1138): note: see declaration of 'cl::vector<T,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1163): warning C4996: 'cl::vector<T,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1138): note: see declaration of 'cl::vector<T,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1476): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1476): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1940): warning C4996: 'cl::vector<T,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1138): note: see declaration of 'cl::vector<T,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2089): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2103): note: see reference to class template instantiation 'cl::vector<cl::Device,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2103): warning C4996: 'cl::vector<cl::Device,10>::assign': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(894): note: see declaration of 'cl::vector<cl::Device,10>::assign'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2204): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2307): warning C4996: 'cl::vector<cl::Platform,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2307): note: see declaration of 'cl::vector<cl::Platform,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2221): warning C4996: 'cl::vector<cl::Device,10>::assign': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(894): note: see declaration of 'cl::vector<cl::Device,10>::assign'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<cl::Platform,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2307): note: see declaration of 'cl::vector<cl::Platform,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2327): note: see reference to class template instantiation 'cl::vector<cl::Platform,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<cl::Platform,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2307): note: see declaration of 'cl::vector<cl::Platform,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<cl::Platform,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2307): note: see declaration of 'cl::vector<cl::Platform,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<cl::Platform,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2307): note: see declaration of 'cl::vector<cl::Platform,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<cl::Platform,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2307): note: see declaration of 'cl::vector<cl::Platform,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2327): warning C4996: 'cl::vector<cl::Platform,10>::assign': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(894): note: see declaration of 'cl::vector<cl::Platform,10>::assign'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2453): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2727): warning C4996: 'cl::vector<cl::ImageFormat,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2727): note: see declaration of 'cl::vector<cl::ImageFormat,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2466): warning C4996: 'cl::vector<cl::Device,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Device,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2469): warning C4996: 'cl::vector<cl::Device,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<cl::Device,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2531): warning C4996: 'cl::vector<cl::Platform,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2307): note: see declaration of 'cl::vector<cl::Platform,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2545): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2543): warning C4996: 'cl::vector<cl::Platform,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Platform,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2551): warning C4996: 'cl::vector<cl::Platform,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(868): note: see declaration of 'cl::vector<cl::Platform,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2567): warning C4996: 'cl::vector<cl::Device,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Device,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2568): warning C4996: 'cl::vector<cl::Platform,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(868): note: see declaration of 'cl::vector<cl::Platform,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<cl::ImageFormat,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2727): note: see declaration of 'cl::vector<cl::ImageFormat,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2754): note: see reference to class template instantiation 'cl::vector<cl::ImageFormat,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<cl::ImageFormat,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2727): note: see declaration of 'cl::vector<cl::ImageFormat,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<cl::ImageFormat,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2727): note: see declaration of 'cl::vector<cl::ImageFormat,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<cl::ImageFormat,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2727): note: see declaration of 'cl::vector<cl::ImageFormat,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<cl::ImageFormat,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2727): note: see declaration of 'cl::vector<cl::ImageFormat,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2754): warning C4996: 'cl::vector<cl::ImageFormat,10>::assign': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(894): note: see declaration of 'cl::vector<cl::ImageFormat,10>::assign'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2773): warning C4996: 'cl::vector<cl::Device,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(868): note: see declaration of 'cl::vector<cl::Device,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2773): warning C4996: 'cl::vector<cl::Device,10>::~vector': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(699): note: see declaration of 'cl::vector<cl::Device,10>::~vector'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2919): note: see reference to class template instantiation 'cl::vector<cl::Event,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2919): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2972): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2976): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4965): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4965): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4966): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4966): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5081): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5081): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5138): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5208): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5312): warning C4996: 'cl::vector<cl::Kernel,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5312): note: see declaration of 'cl::vector<cl::Kernel,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4966): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5044): note: see reference to class template instantiation 'cl::vector<std::pair<const char *,std::size_t>,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4966): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4966): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4966): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4966): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5044): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5049): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5050): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4965): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5093): note: see reference to class template instantiation 'cl::vector<std::pair<const void *,std::size_t>,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4965): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4965): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4965): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(4965): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5116): note: see reference to class template instantiation 'cl::vector<cl_context_properties,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<cl_context_properties,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl_context_properties,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5090): warning C4996: 'cl::vector<cl::Device,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Device,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5093): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5106): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5107): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5112): warning C4996: 'cl::vector<cl::Device,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<cl::Device,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5116): warning C4996: 'cl::vector<cl_context_properties,10>::resize': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(841): note: see declaration of 'cl::vector<cl_context_properties,10>::resize'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5120): warning C4996: 'cl::vector<cl::Device,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Device,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5123): warning C4996: 'cl::vector<cl_context_properties,10>::front': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1019): note: see declaration of 'cl::vector<cl_context_properties,10>::front'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5147): warning C4996: 'cl::vector<cl::Device,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Device,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5150): warning C4996: 'cl::vector<cl::Device,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<cl::Device,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5155): warning C4996: 'cl::vector<cl::Device,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Device,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5213): warning C4996: 'cl::vector<cl::Device,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Device,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5216): warning C4996: 'cl::vector<cl::Device,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<cl::Device,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5223): warning C4996: 'cl::vector<cl::Device,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Device,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<cl::Kernel,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5312): note: see declaration of 'cl::vector<cl::Kernel,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5327): note: see reference to class template instantiation 'cl::vector<cl::Kernel,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<cl::Kernel,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5312): note: see declaration of 'cl::vector<cl::Kernel,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<cl::Kernel,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5312): note: see declaration of 'cl::vector<cl::Kernel,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<cl::Kernel,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5312): note: see declaration of 'cl::vector<cl::Kernel,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<cl::Kernel,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5312): note: see declaration of 'cl::vector<cl::Kernel,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5327): warning C4996: 'cl::vector<cl::Kernel,10>::assign': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(894): note: see declaration of 'cl::vector<cl::Kernel,10>::assign'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5370): warning C4996: 'cl::vector<cl::Program,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5370): note: see declaration of 'cl::vector<cl::Program,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<cl::Program,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5370): note: see declaration of 'cl::vector<cl::Program,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5375): note: see reference to class template instantiation 'cl::vector<cl::Program,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<cl::Program,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5370): note: see declaration of 'cl::vector<cl::Program,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<cl::Program,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5370): note: see declaration of 'cl::vector<cl::Program,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<cl::Program,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5370): note: see declaration of 'cl::vector<cl::Program,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<cl::Program,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5370): note: see declaration of 'cl::vector<cl::Program,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5375): warning C4996: 'cl::vector<cl::Program,10>::~vector': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(699): note: see declaration of 'cl::vector<cl::Program,10>::~vector'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5378): warning C4996: 'cl::vector<cl::Program,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Program,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5381): warning C4996: 'cl::vector<cl::Program,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Program,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5382): warning C4996: 'cl::vector<cl::Program,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(868): note: see declaration of 'cl::vector<cl::Program,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5387): warning C4996: 'cl::vector<cl::Program,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Program,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5388): warning C4996: 'cl::vector<cl::Program,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(868): note: see declaration of 'cl::vector<cl::Program,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5398): warning C4996: 'cl::vector<cl::Program,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Program,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5414): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5431): note: see reference to class template instantiation 'cl::vector<char *,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5416): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5416): note: see reference to class template instantiation 'cl::vector<std::size_t,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5417): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5418): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(909): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5418): note: see reference to class template instantiation 'cl::vector<std::size_t,10>::iterator' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(917): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(942): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(949): warning C4996: 'cl::vector<std::size_t,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<std::size_t,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5416): warning C4996: 'cl::vector<std::size_t,10>::~vector': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(699): note: see declaration of 'cl::vector<std::size_t,10>::~vector'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5418): warning C4996: 'cl::vector<std::size_t,10>::begin': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(999): note: see declaration of 'cl::vector<std::size_t,10>::begin'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5423): warning C4996: 'cl::vector<char *,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<char *,10>::push_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5430): warning C4996: 'cl::vector<char *,10>::vector': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): note: see declaration of 'cl::vector<char *,10>::vector'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5663): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5688): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5713): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5742): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5781): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5819): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5859): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5891): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5918): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5943): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5975): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6009): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6043): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6072): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6097): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6122): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6153): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6180): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6211): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6241): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6266): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6301): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6324): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6345): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6346): warning C4996: 'cl::vector<const void *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6346): note: see declaration of 'cl::vector<const void *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6347): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6411): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6412): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6433): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6434): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5475): warning C4996: 'cl::vector<cl::Device,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(868): note: see declaration of 'cl::vector<cl::Device,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5475): warning C4996: 'cl::vector<cl::Device,10>::~vector': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(699): note: see declaration of 'cl::vector<cl::Device,10>::~vector'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5495): warning C4996: 'cl::vector<cl::Device,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1471): note: see declaration of 'cl::vector<cl::Device,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5508): warning C4996: 'cl::vector<cl::Device,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(868): note: see declaration of 'cl::vector<cl::Device,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5600): warning C4996: 'cl::vector<cl::Device,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(868): note: see declaration of 'cl::vector<cl::Device,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5600): warning C4996: 'cl::vector<cl::Device,10>::~vector': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(699): note: see declaration of 'cl::vector<cl::Device,10>::~vector'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5671): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5672): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5696): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5697): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5720): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5721): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5759): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5760): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5798): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5799): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5835): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5836): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5899): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5900): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5926): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5927): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5951): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5952): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5986): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5987): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6020): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6021): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6054): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6055): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6080): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6081): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6105): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6106): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6130): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6131): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6163): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6164): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6187): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6188): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6218): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6219): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6248): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6249): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6272): note: see reference to class template instantiation 'cl::vector<cl::Memory,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<cl::Memory,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6264): note: see declaration of 'cl::vector<cl::Memory,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6272): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6273): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6274): warning C4996: 'cl::vector<cl::Memory,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<cl::Memory,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6281): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6284): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6285): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6311): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6312): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6331): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6332): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<const void *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6346): note: see declaration of 'cl::vector<const void *,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6366): note: see reference to class template instantiation 'cl::vector<const void *,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<const void *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6346): note: see declaration of 'cl::vector<const void *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<const void *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6346): note: see declaration of 'cl::vector<const void *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<const void *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6346): note: see declaration of 'cl::vector<const void *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<const void *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6346): note: see declaration of 'cl::vector<const void *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6350): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6351): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6355): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6356): warning C4996: 'cl::vector<cl::Memory,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<cl::Memory,10>::operator []'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6364): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6366): warning C4996: 'cl::vector<const void *,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<const void *,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6367): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6368): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6419): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6420): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6421): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6422): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6441): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6442): warning C4996: 'cl::vector<cl::Memory,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Memory,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6443): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6444): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6678): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6697): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6716): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6729): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6730): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6744): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6758): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6759): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6775): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6902): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6938): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6973): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7006): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7036): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7064): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7090): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7116): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7173): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7229): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7239): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7249): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7313): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7323): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7333): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7208): warning C4996: 'cl::vector<cl::Event,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::Event,10>::push_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7217): warning C4996: 'cl::vector<cl::Event,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::Event,10>::push_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7226): warning C4996: 'cl::vector<cl::Event,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::Event,10>::push_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7292): warning C4996: 'cl::vector<cl::Event,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::Event,10>::push_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7301): warning C4996: 'cl::vector<cl::Event,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::Event,10>::push_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7310): warning C4996: 'cl::vector<cl::Event,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::Event,10>::push_back'
+main.cpp(135): warning C4005: 'INFINITY': macro redefinition
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(78): note: see previous definition of 'INFINITY'
-main.cpp(203): warning C4305: 'initializing': truncation from 'double' to 'float'
-main.cpp(216): warning C4305: 'argument': truncation from 'double' to 'const float'
-main.cpp(230): warning C4305: 'initializing': truncation from 'double' to 'float'
-main.cpp(299): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(306): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(307): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(401): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-main.cpp(404): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-main.cpp(407): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(419): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(423): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(424): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(427): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(428): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(436): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-main.cpp(436): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(170): warning C4996: 'cl::vector<Sphere,10>': was declared deprecated
+  main.cpp(170): note: see declaration of 'cl::vector<Sphere,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(694): warning C4996: 'cl::vector<Sphere,10>': was declared deprecated
+  main.cpp(170): note: see declaration of 'cl::vector<Sphere,10>'
+  main.cpp(178): note: see reference to class template instantiation 'cl::vector<Sphere,10>' being compiled
+  E:\Programs\Microsoft Visual Studio 14.0\VC\include\chrono(208): note: see reference to class template instantiation 'std::chrono::duration_values<_Rep>' being compiled
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+  E:\Programs\Microsoft Visual Studio 14.0\VC\include\chrono(207): note: while compiling class template member function 'std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period> std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period>::zero(void)'
+  E:\Programs\Microsoft Visual Studio 14.0\VC\include\chrono(237): note: see reference to function template instantiation 'std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period> std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period>::zero(void)' being compiled
+  E:\Programs\Microsoft Visual Studio 14.0\VC\include\chrono(231): note: see reference to class template instantiation 'std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period>' being compiled
+  E:\Programs\Microsoft Visual Studio 14.0\VC\include\chrono(973): note: see reference to class template instantiation 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): warning C4996: 'cl::vector<Sphere,10>': was declared deprecated
+  main.cpp(170): note: see declaration of 'cl::vector<Sphere,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(768): warning C4996: 'cl::vector<Sphere,10>': was declared deprecated
+  main.cpp(170): note: see declaration of 'cl::vector<Sphere,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(783): warning C4996: 'cl::vector<Sphere,10>': was declared deprecated
+  main.cpp(170): note: see declaration of 'cl::vector<Sphere,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(802): warning C4996: 'cl::vector<Sphere,10>': was declared deprecated
+  main.cpp(170): note: see declaration of 'cl::vector<Sphere,10>'
+main.cpp(213): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(226): warning C4305: 'argument': truncation from 'double' to 'const float'
+main.cpp(240): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(178): warning C4996: 'cl::vector<Sphere,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<Sphere,10>::size'
+main.cpp(182): warning C4996: 'cl::vector<Sphere,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<Sphere,10>::operator []'
+main.cpp(192): warning C4996: 'cl::vector<Sphere,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<Sphere,10>::operator []'
+main.cpp(257): warning C4996: 'cl::vector<Sphere,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<Sphere,10>::size'
+main.cpp(259): warning C4996: 'cl::vector<Sphere,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<Sphere,10>::operator []'
+main.cpp(263): warning C4996: 'cl::vector<Sphere,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<Sphere,10>::operator []'
+main.cpp(266): warning C4996: 'cl::vector<Sphere,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<Sphere,10>::size'
+main.cpp(271): warning C4996: 'cl::vector<Sphere,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<Sphere,10>::operator []'
+main.cpp(280): warning C4996: 'cl::vector<Sphere,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<Sphere,10>::operator []'
+main.cpp(293): warning C4996: 'cl::vector<Sphere,10>': was declared deprecated
+  main.cpp(170): note: see declaration of 'cl::vector<Sphere,10>'
+main.cpp(309): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(316): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(317): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(405): warning C4996: 'cl::vector<Sphere,10>': was declared deprecated
+  main.cpp(170): note: see declaration of 'cl::vector<Sphere,10>'
+main.cpp(411): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+main.cpp(414): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+main.cpp(417): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(429): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(433): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(434): warning C4305: 'argument': truncation from 'double' to 'float'
 main.cpp(437): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(441): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(445): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(456): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-main.cpp(530): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Generating code
-  94 of 708 functions (13.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    9 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Release\RayTracerSmall.exe
-  RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\Release\RayTracerSmall.pdb (Full PDB)
+main.cpp(438): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(446): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(446): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(447): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(451): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(455): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(417): warning C4996: 'cl::vector<Sphere,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<Sphere,10>::push_back'
+main.cpp(430): warning C4996: 'cl::vector<Sphere,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<Sphere,10>::push_back'
+main.cpp(434): warning C4996: 'cl::vector<Sphere,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<Sphere,10>::push_back'
+main.cpp(439): warning C4996: 'cl::vector<Sphere,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<Sphere,10>::push_back'
+main.cpp(443): warning C4996: 'cl::vector<Sphere,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<Sphere,10>::push_back'
+main.cpp(447): warning C4996: 'cl::vector<Sphere,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<Sphere,10>::push_back'
+main.cpp(458): warning C4996: 'cl::vector<Sphere,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<Sphere,10>::clear'
+main.cpp(466): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+main.cpp(540): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+main.cpp(604): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(882): warning C4996: 'cl::vector<Sphere,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<Sphere,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(881): note: while compiling class template member function 'const Sphere &cl::vector<Sphere,10>::operator [](int) const'
+  main.cpp(182): note: see reference to function template instantiation 'const Sphere &cl::vector<Sphere,10>::operator [](int) const' being compiled
+  main.cpp(178): note: see reference to class template instantiation 'cl::vector<Sphere,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(729): warning C4996: 'cl::vector<Sphere,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<Sphere,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(727): note: while compiling class template member function 'void cl::vector<Sphere,10>::push_back(const T &)'
+          with
+          [
+              T=Sphere
+          ]
+  main.cpp(417): note: see reference to function template instantiation 'void cl::vector<Sphere,10>::push_back(const T &)' being compiled
+          with
+          [
+              T=Sphere
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(729): warning C4996: 'cl::vector<Sphere,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<Sphere,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(730): warning C4996: 'cl::vector<Sphere,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<Sphere,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(728): warning C4996: 'cl::vector<Sphere,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<Sphere,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): warning C4996: 'cl::vector<Sphere,10>::empty': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(823): note: see declaration of 'cl::vector<Sphere,10>::empty'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(716): note: while compiling class template member function 'void cl::vector<Sphere,10>::clear(void)'
+  main.cpp(458): note: see reference to function template instantiation 'void cl::vector<Sphere,10>::clear(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): warning C4996: 'cl::vector<Sphere,10>::pop_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(740): note: see declaration of 'cl::vector<Sphere,10>::pop_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<Sphere,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<Sphere,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<Sphere,10>::size(void) const'
+  main.cpp(178): note: see reference to function template instantiation 'unsigned int cl::vector<Sphere,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): warning C4996: 'cl::vector<Sphere,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<Sphere,10>::clear'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): note: while compiling class template member function 'cl::vector<Sphere,10>::~vector(void)'
+  main.cpp(405): note: see reference to function template instantiation 'cl::vector<Sphere,10>::~vector(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1031): warning C4996: 'cl::vector<const void *,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<const void *,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1030): note: while compiling class template member function 'const void *const &cl::vector<const void *,10>::front(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6361): note: see reference to function template instantiation 'const void *const &cl::vector<const void *,10>::front(void) const' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6366): note: see reference to class template instantiation 'cl::vector<const void *,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<const void *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<const void *,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<const void *,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6361): note: see reference to function template instantiation 'unsigned int cl::vector<const void *,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1031): warning C4996: 'cl::vector<cl::Memory,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Memory,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1030): note: while compiling class template member function 'const cl::Memory &cl::vector<cl::Memory,10>::front(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6416): note: see reference to function template instantiation 'const cl::Memory &cl::vector<cl::Memory,10>::front(void) const' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6272): note: see reference to class template instantiation 'cl::vector<cl::Memory,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(882): warning C4996: 'cl::vector<cl::Memory,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Memory,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(881): note: while compiling class template member function 'const cl::Memory &cl::vector<cl::Memory,10>::operator [](int) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6274): note: see reference to function template instantiation 'const cl::Memory &cl::vector<cl::Memory,10>::operator [](int) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<cl::Memory,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Memory,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<cl::Memory,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(6272): note: see reference to function template instantiation 'unsigned int cl::vector<cl::Memory,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(995): warning C4996: 'cl::vector<std::size_t,10>::operator []': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(880): note: see declaration of 'cl::vector<std::size_t,10>::operator []'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(994): note: while compiling class template member function 'const size_t &cl::vector<std::size_t,10>::iterator::operator *(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5421): note: see reference to function template instantiation 'const size_t &cl::vector<std::size_t,10>::iterator::operator *(void) const' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5418): note: see reference to class template instantiation 'cl::vector<std::size_t,10>::iterator' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(870): warning C4996: 'cl::vector<cl::Program,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Program,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(869): note: while compiling class template member function 'cl::Program &cl::vector<cl::Program,10>::operator [](int)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5382): note: see reference to function template instantiation 'cl::Program &cl::vector<cl::Program,10>::operator [](int)' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5375): note: see reference to class template instantiation 'cl::vector<cl::Program,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<cl::Program,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Program,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<cl::Program,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5378): note: see reference to function template instantiation 'unsigned int cl::vector<cl::Program,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): warning C4996: 'cl::vector<cl::Program,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Program,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): note: while compiling class template member function 'cl::vector<cl::Program,10>::~vector(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5375): note: see reference to function template instantiation 'cl::vector<cl::Program,10>::~vector(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): warning C4996: 'cl::vector<cl::Program,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<cl::Program,10>::clear'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(882): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(881): note: while compiling class template member function 'const std::pair<const char *,std::size_t> &cl::vector<std::pair<const char *,std::size_t>,10>::operator [](int) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5049): note: see reference to function template instantiation 'const std::pair<const char *,std::size_t> &cl::vector<std::pair<const char *,std::size_t>,10>::operator [](int) const' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5044): note: see reference to class template instantiation 'cl::vector<std::pair<const char *,std::size_t>,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<std::pair<const char *,std::size_t>,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<std::pair<const char *,std::size_t>,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<std::pair<const char *,std::size_t>,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5044): note: see reference to function template instantiation 'unsigned int cl::vector<std::pair<const char *,std::size_t>,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(882): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(881): note: while compiling class template member function 'const std::pair<const void *,std::size_t> &cl::vector<std::pair<const void *,std::size_t>,10>::operator [](int) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5106): note: see reference to function template instantiation 'const std::pair<const void *,std::size_t> &cl::vector<std::pair<const void *,std::size_t>,10>::operator [](int) const' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5093): note: see reference to class template instantiation 'cl::vector<std::pair<const void *,std::size_t>,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<std::pair<const void *,std::size_t>,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<std::pair<const void *,std::size_t>,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<std::pair<const void *,std::size_t>,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5093): note: see reference to function template instantiation 'unsigned int cl::vector<std::pair<const void *,std::size_t>,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1031): warning C4996: 'cl::vector<cl::Event,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Event,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1030): note: while compiling class template member function 'const cl::Event &cl::vector<cl::Event,10>::front(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2917): note: see reference to function template instantiation 'const cl::Event &cl::vector<cl::Event,10>::front(void) const' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2919): note: see reference to class template instantiation 'cl::vector<cl::Event,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(755): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): note: while compiling class template member function 'cl::vector<cl::Event,10>::vector(const cl::vector<cl::Event,10> &)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7234): note: see reference to function template instantiation 'cl::vector<cl::Event,10>::vector(const cl::vector<cl::Event,10> &)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(757): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(909): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(758): note: see reference to class template instantiation 'cl::vector<cl::Event,10>::iterator' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(917): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(942): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(949): warning C4996: 'cl::vector<cl::Event,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2915): note: see declaration of 'cl::vector<cl::Event,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(758): warning C4996: 'cl::vector<cl::Event,10>::assign': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(894): note: see declaration of 'cl::vector<cl::Event,10>::assign'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(729): warning C4996: 'cl::vector<cl::Event,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Event,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(727): note: while compiling class template member function 'void cl::vector<cl::Event,10>::push_back(const T &)'
+          with
+          [
+              T=cl::Event
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7208): note: see reference to function template instantiation 'void cl::vector<cl::Event,10>::push_back(const T &)' being compiled
+          with
+          [
+              T=cl::Event
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(729): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(730): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(728): warning C4996: 'cl::vector<cl::Event,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<cl::Event,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<cl::Event,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2917): note: see reference to function template instantiation 'unsigned int cl::vector<cl::Event,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): warning C4996: 'cl::vector<cl::Event,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Event,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): note: while compiling class template member function 'cl::vector<cl::Event,10>::~vector(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7180): note: see reference to function template instantiation 'cl::vector<cl::Event,10>::~vector(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): warning C4996: 'cl::vector<cl::Event,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<cl::Event,10>::clear'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(870): warning C4996: 'cl::vector<cl::Platform,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Platform,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(869): note: while compiling class template member function 'cl::Platform &cl::vector<cl::Platform,10>::operator [](int)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2551): note: see reference to function template instantiation 'cl::Platform &cl::vector<cl::Platform,10>::operator [](int)' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2327): note: see reference to class template instantiation 'cl::vector<cl::Platform,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<cl::Platform,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Platform,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<cl::Platform,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2543): note: see reference to function template instantiation 'unsigned int cl::vector<cl::Platform,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): warning C4996: 'cl::vector<cl::Platform,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Platform,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): note: while compiling class template member function 'cl::vector<cl::Platform,10>::~vector(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2531): note: see reference to function template instantiation 'cl::vector<cl::Platform,10>::~vector(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1021): warning C4996: 'cl::vector<cl_context_properties,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl_context_properties,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1020): note: while compiling class template member function 'cl_context_properties &cl::vector<cl_context_properties,10>::front(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5119): note: see reference to function template instantiation 'cl_context_properties &cl::vector<cl_context_properties,10>::front(void)' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5116): note: see reference to class template instantiation 'cl::vector<cl_context_properties,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(849): warning C4996: 'cl::vector<cl_context_properties,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl_context_properties,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(842): note: while compiling class template member function 'void cl::vector<cl_context_properties,10>::resize(unsigned int,T)'
+          with
+          [
+              T=cl_context_properties
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5116): note: see reference to function template instantiation 'void cl::vector<cl_context_properties,10>::resize(unsigned int,T)' being compiled
+          with
+          [
+              T=cl_context_properties
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(851): warning C4996: 'cl::vector<cl_context_properties,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl_context_properties,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(851): warning C4996: 'cl::vector<cl_context_properties,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl_context_properties,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(852): warning C4996: 'cl::vector<cl_context_properties,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl_context_properties,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(854): warning C4996: 'cl::vector<cl_context_properties,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl_context_properties,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(856): warning C4996: 'cl::vector<cl_context_properties,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl_context_properties,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(857): warning C4996: 'cl::vector<cl_context_properties,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl_context_properties,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(857): warning C4996: 'cl::vector<cl_context_properties,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl_context_properties,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(882): warning C4996: 'cl::vector<cl::Device,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Device,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(881): note: while compiling class template member function 'const cl::Device &cl::vector<cl::Device,10>::operator [](int) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2469): note: see reference to function template instantiation 'const cl::Device &cl::vector<cl::Device,10>::operator [](int) const' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2103): note: see reference to class template instantiation 'cl::vector<cl::Device,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(870): warning C4996: 'cl::vector<cl::Device,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Device,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(869): note: while compiling class template member function 'cl::Device &cl::vector<cl::Device,10>::operator [](int)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2773): note: see reference to function template instantiation 'cl::Device &cl::vector<cl::Device,10>::operator [](int)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<cl::Device,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Device,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<cl::Device,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2466): note: see reference to function template instantiation 'unsigned int cl::vector<cl::Device,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): warning C4996: 'cl::vector<cl::Device,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Device,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): note: while compiling class template member function 'cl::vector<cl::Device,10>::~vector(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2545): note: see reference to function template instantiation 'cl::vector<cl::Device,10>::~vector(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(755): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): note: while compiling class template member function 'cl::vector<char *,10>::vector(const cl::vector<char *,10> &)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5430): note: see reference to function template instantiation 'cl::vector<char *,10>::vector(const cl::vector<char *,10> &)' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5431): note: see reference to class template instantiation 'cl::vector<char *,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(757): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(909): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(758): note: see reference to class template instantiation 'cl::vector<char *,10>::iterator' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(917): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(942): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(949): warning C4996: 'cl::vector<char *,10>': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(1194): note: see declaration of 'cl::vector<char *,10>'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(758): warning C4996: 'cl::vector<char *,10>::assign': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(894): note: see declaration of 'cl::vector<char *,10>::assign'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(729): warning C4996: 'cl::vector<char *,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<char *,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(727): note: while compiling class template member function 'void cl::vector<char *,10>::push_back(const T &)'
+          with
+          [
+              T=char *
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5423): note: see reference to function template instantiation 'void cl::vector<char *,10>::push_back(const T &)' being compiled
+          with
+          [
+              T=char *
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(729): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(730): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(728): warning C4996: 'cl::vector<char *,10>::size': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(705): note: see declaration of 'cl::vector<char *,10>::size'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): warning C4996: 'cl::vector<char *,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<char *,10>::clear'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(700): note: while compiling class template member function 'cl::vector<char *,10>::~vector(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5417): note: see reference to function template instantiation 'cl::vector<char *,10>::~vector(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(825): warning C4996: 'cl::vector<Sphere,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<Sphere,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(824): note: while compiling class template member function 'bool cl::vector<Sphere,10>::empty(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): note: see reference to function template instantiation 'bool cl::vector<Sphere,10>::empty(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(742): warning C4996: 'cl::vector<Sphere,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<Sphere,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(741): note: while compiling class template member function 'void cl::vector<Sphere,10>::pop_back(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): note: see reference to function template instantiation 'void cl::vector<Sphere,10>::pop_back(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(743): warning C4996: 'cl::vector<Sphere,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<Sphere,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<Sphere,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<Sphere,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<Sphere,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<Sphere,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): warning C4996: 'cl::vector<cl::Program,10>::empty': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(823): note: see declaration of 'cl::vector<cl::Program,10>::empty'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(716): note: while compiling class template member function 'void cl::vector<cl::Program,10>::clear(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): note: see reference to function template instantiation 'void cl::vector<cl::Program,10>::clear(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): warning C4996: 'cl::vector<cl::Program,10>::pop_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(740): note: see declaration of 'cl::vector<cl::Program,10>::pop_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): warning C4996: 'cl::vector<cl::Event,10>::empty': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(823): note: see declaration of 'cl::vector<cl::Event,10>::empty'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(716): note: while compiling class template member function 'void cl::vector<cl::Event,10>::clear(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): note: see reference to function template instantiation 'void cl::vector<cl::Event,10>::clear(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): warning C4996: 'cl::vector<cl::Event,10>::pop_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(740): note: see declaration of 'cl::vector<cl::Event,10>::pop_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): warning C4996: 'cl::vector<cl::Platform,10>::empty': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(823): note: see declaration of 'cl::vector<cl::Platform,10>::empty'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(716): note: while compiling class template member function 'void cl::vector<cl::Platform,10>::clear(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): note: see reference to function template instantiation 'void cl::vector<cl::Platform,10>::clear(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): warning C4996: 'cl::vector<cl::Platform,10>::pop_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(740): note: see declaration of 'cl::vector<cl::Platform,10>::pop_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): warning C4996: 'cl::vector<cl::Device,10>::empty': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(823): note: see declaration of 'cl::vector<cl::Device,10>::empty'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(716): note: while compiling class template member function 'void cl::vector<cl::Device,10>::clear(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): note: see reference to function template instantiation 'void cl::vector<cl::Device,10>::clear(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): warning C4996: 'cl::vector<cl::Device,10>::pop_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(740): note: see declaration of 'cl::vector<cl::Device,10>::pop_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(882): warning C4996: 'cl::vector<std::size_t,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<std::size_t,10>::data_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(881): note: while compiling class template member function 'const size_t &cl::vector<std::size_t,10>::operator [](int) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(995): note: see reference to function template instantiation 'const size_t &cl::vector<std::size_t,10>::operator [](int) const' being compiled
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5416): note: see reference to class template instantiation 'cl::vector<std::size_t,10>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): warning C4996: 'cl::vector<std::size_t,10>::empty': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(823): note: see declaration of 'cl::vector<std::size_t,10>::empty'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(716): note: while compiling class template member function 'void cl::vector<std::size_t,10>::clear(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): note: see reference to function template instantiation 'void cl::vector<std::size_t,10>::clear(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): warning C4996: 'cl::vector<std::size_t,10>::pop_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(740): note: see declaration of 'cl::vector<std::size_t,10>::pop_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): warning C4996: 'cl::vector<char *,10>::empty': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(823): note: see declaration of 'cl::vector<char *,10>::empty'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(716): note: while compiling class template member function 'void cl::vector<char *,10>::clear(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(701): note: see reference to function template instantiation 'void cl::vector<char *,10>::clear(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): warning C4996: 'cl::vector<char *,10>::pop_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(740): note: see declaration of 'cl::vector<char *,10>::pop_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<char *,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(728): note: see reference to function template instantiation 'unsigned int cl::vector<char *,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(920): warning C4996: 'cl::vector<std::size_t,10>::empty': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(823): note: see declaration of 'cl::vector<std::size_t,10>::empty'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(917): note: while compiling class template member function 'cl::vector<std::size_t,10>::iterator::iterator(const cl::vector<std::size_t,10> &,int)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(951): note: see reference to function template instantiation 'cl::vector<std::size_t,10>::iterator::iterator(const cl::vector<std::size_t,10> &,int)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(825): warning C4996: 'cl::vector<cl::Program,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Program,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(824): note: while compiling class template member function 'bool cl::vector<cl::Program,10>::empty(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): note: see reference to function template instantiation 'bool cl::vector<cl::Program,10>::empty(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(742): warning C4996: 'cl::vector<cl::Program,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Program,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(741): note: while compiling class template member function 'void cl::vector<cl::Program,10>::pop_back(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): note: see reference to function template instantiation 'void cl::vector<cl::Program,10>::pop_back(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(743): warning C4996: 'cl::vector<cl::Program,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Program,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<cl::Program,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Program,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<cl::Program,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Program,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(825): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(824): note: while compiling class template member function 'bool cl::vector<cl::Event,10>::empty(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): note: see reference to function template instantiation 'bool cl::vector<cl::Event,10>::empty(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(742): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(741): note: while compiling class template member function 'void cl::vector<cl::Event,10>::pop_back(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): note: see reference to function template instantiation 'void cl::vector<cl::Event,10>::pop_back(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(743): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<cl::Event,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Event,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<cl::Event,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Event,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(825): warning C4996: 'cl::vector<cl::Platform,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Platform,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(824): note: while compiling class template member function 'bool cl::vector<cl::Platform,10>::empty(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): note: see reference to function template instantiation 'bool cl::vector<cl::Platform,10>::empty(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(742): warning C4996: 'cl::vector<cl::Platform,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Platform,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(741): note: while compiling class template member function 'void cl::vector<cl::Platform,10>::pop_back(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): note: see reference to function template instantiation 'void cl::vector<cl::Platform,10>::pop_back(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(743): warning C4996: 'cl::vector<cl::Platform,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Platform,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<cl::Platform,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Platform,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<cl::Platform,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Platform,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(825): warning C4996: 'cl::vector<cl::Device,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Device,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(824): note: while compiling class template member function 'bool cl::vector<cl::Device,10>::empty(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): note: see reference to function template instantiation 'bool cl::vector<cl::Device,10>::empty(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(742): warning C4996: 'cl::vector<cl::Device,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Device,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(741): note: while compiling class template member function 'void cl::vector<cl::Device,10>::pop_back(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): note: see reference to function template instantiation 'void cl::vector<cl::Device,10>::pop_back(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(743): warning C4996: 'cl::vector<cl::Device,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Device,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<cl::Device,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<cl::Device,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<cl::Device,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<cl::Device,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(825): warning C4996: 'cl::vector<std::size_t,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<std::size_t,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(824): note: while compiling class template member function 'bool cl::vector<std::size_t,10>::empty(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): note: see reference to function template instantiation 'bool cl::vector<std::size_t,10>::empty(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(742): warning C4996: 'cl::vector<std::size_t,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<std::size_t,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(741): note: while compiling class template member function 'void cl::vector<std::size_t,10>::pop_back(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): note: see reference to function template instantiation 'void cl::vector<std::size_t,10>::pop_back(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(743): warning C4996: 'cl::vector<std::size_t,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<std::size_t,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<std::size_t,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<std::size_t,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<std::size_t,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<std::size_t,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(707): warning C4996: 'cl::vector<std::size_t,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<std::size_t,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(706): note: while compiling class template member function 'unsigned int cl::vector<std::size_t,10>::size(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(951): note: see reference to function template instantiation 'unsigned int cl::vector<std::size_t,10>::size(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(825): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(824): note: while compiling class template member function 'bool cl::vector<char *,10>::empty(void) const'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(717): note: see reference to function template instantiation 'bool cl::vector<char *,10>::empty(void) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(742): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(741): note: while compiling class template member function 'void cl::vector<char *,10>::pop_back(void)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(718): note: see reference to function template instantiation 'void cl::vector<char *,10>::pop_back(void)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(743): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<char *,10>::data_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(689): note: see declaration of 'cl::vector<char *,10>::data_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(744): warning C4996: 'cl::vector<char *,10>::size_': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(690): note: see declaration of 'cl::vector<char *,10>::size_'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): error C2664: 'void cl::vector<cl::Device,10>::push_back(const T &)': cannot convert argument 1 from 'cl_device_id' to 'const cl::Device &'
+          with
+          [
+              T=cl::Device
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): note: Reason: cannot convert from 'cl_device_id' to 'const cl::Device'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): note: Constructor for class 'cl::Device' is declared 'explicit'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2103): note: see reference to function template instantiation 'void cl::vector<cl::Device,10>::assign<cl_device_id*>(I,I)' being compiled
+          with
+          [
+              I=cl_device_id *
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2103): note: see reference to function template instantiation 'void cl::vector<cl::Device,10>::assign<cl_device_id*>(I,I)' being compiled
+          with
+          [
+              I=cl_device_id *
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(896): warning C4996: 'cl::vector<cl::Device,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<cl::Device,10>::clear'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): error C2664: 'void cl::vector<cl::Platform,10>::push_back(const T &)': cannot convert argument 1 from 'cl_platform_id' to 'const cl::Platform &'
+          with
+          [
+              T=cl::Platform
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): note: Reason: cannot convert from 'cl_platform_id' to 'const cl::Platform'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): note: Constructor for class 'cl::Platform' is declared 'explicit'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2327): note: see reference to function template instantiation 'void cl::vector<cl::Platform,10>::assign<cl_platform_id*>(I,I)' being compiled
+          with
+          [
+              I=cl_platform_id *
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2327): note: see reference to function template instantiation 'void cl::vector<cl::Platform,10>::assign<cl_platform_id*>(I,I)' being compiled
+          with
+          [
+              I=cl_platform_id *
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): warning C4996: 'cl::vector<cl::ImageFormat,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::ImageFormat,10>::push_back'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2754): note: see reference to function template instantiation 'void cl::vector<cl::ImageFormat,10>::assign<cl::ImageFormat*>(I,I)' being compiled
+          with
+          [
+              I=cl::ImageFormat *
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2754): note: see reference to function template instantiation 'void cl::vector<cl::ImageFormat,10>::assign<cl::ImageFormat*>(I,I)' being compiled
+          with
+          [
+              I=cl::ImageFormat *
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2717): warning C4996: 'cl::vector<cl::Device,10>::vector': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): note: see declaration of 'cl::vector<cl::Device,10>::vector'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(2773): note: see reference to function template instantiation 'cl::detail::param_traits<cl::detail::cl_context_info,4225>::param_type cl::Context::getInfo<4225>(cl_int *) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(896): warning C4996: 'cl::vector<cl::Kernel,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<cl::Kernel,10>::clear'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5327): note: see reference to function template instantiation 'void cl::vector<cl::Kernel,10>::assign<cl::Kernel*>(I,I)' being compiled
+          with
+          [
+              I=cl::Kernel *
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5327): note: see reference to function template instantiation 'void cl::vector<cl::Kernel,10>::assign<cl::Kernel*>(I,I)' being compiled
+          with
+          [
+              I=cl::Kernel *
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): warning C4996: 'cl::vector<cl::Kernel,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::Kernel,10>::push_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5286): warning C4996: 'cl::vector<std::size_t,10>::vector': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): note: see declaration of 'cl::vector<std::size_t,10>::vector'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5416): note: see reference to function template instantiation 'cl::detail::param_traits<cl::detail::cl_program_info,4453>::param_type cl::Program::getInfo<4453>(cl_int *) const' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(896): warning C4996: 'cl::vector<cl::Event,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<cl::Event,10>::clear'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(758): note: see reference to function template instantiation 'void cl::vector<cl::Event,10>::assign<cl::vector<cl::Event,10>::iterator>(I,I)' being compiled
+          with
+          [
+              I=cl::vector<cl::Event,10>::iterator
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(758): note: see reference to function template instantiation 'void cl::vector<cl::Event,10>::assign<cl::vector<cl::Event,10>::iterator>(I,I)' being compiled
+          with
+          [
+              I=cl::vector<cl::Event,10>::iterator
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): note: while compiling class template member function 'cl::vector<cl::Event,10>::vector(const cl::vector<cl::Event,10> &)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(7234): note: see reference to function template instantiation 'cl::vector<cl::Event,10>::vector(const cl::vector<cl::Event,10> &)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): warning C4996: 'cl::vector<cl::Event,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<cl::Event,10>::push_back'
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(896): warning C4996: 'cl::vector<char *,10>::clear': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(715): note: see declaration of 'cl::vector<char *,10>::clear'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(758): note: see reference to function template instantiation 'void cl::vector<char *,10>::assign<cl::vector<char *,10>::iterator>(I,I)' being compiled
+          with
+          [
+              I=cl::vector<char *,10>::iterator
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(758): note: see reference to function template instantiation 'void cl::vector<char *,10>::assign<cl::vector<char *,10>::iterator>(I,I)' being compiled
+          with
+          [
+              I=cl::vector<char *,10>::iterator
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(754): note: while compiling class template member function 'cl::vector<char *,10>::vector(const cl::vector<char *,10> &)'
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(5430): note: see reference to function template instantiation 'cl::vector<char *,10>::vector(const cl::vector<char *,10> &)' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(898): warning C4996: 'cl::vector<char *,10>::push_back': was declared deprecated
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\CL/cl.hpp(726): note: see declaration of 'cl::vector<char *,10>::push_back'

@@ -1,0 +1,33 @@
+﻿  main.cpp
+main.cpp(134): warning C4005: 'INFINITY': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(78): note: see previous definition of 'INFINITY'
+main.cpp(212): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(225): warning C4305: 'argument': truncation from 'double' to 'const float'
+main.cpp(239): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(308): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(315): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(316): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(410): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+main.cpp(413): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+main.cpp(416): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(428): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(432): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(433): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(436): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(437): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(445): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(445): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(446): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(450): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(454): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(465): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+main.cpp(539): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+main.cpp(595): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+  Generating code
+  24 of 729 functions ( 3.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    32 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\x64\Release\RayTracerSmall.exe
+  RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\x64\Release\RayTracerSmall.pdb (Full PDB)

@@ -6,13 +6,22 @@
 #include <iostream>
 #include <cassert>
 #include <filesystem>
+#include <iterator>
+#include <utility>
 
 // Open CL
+#pragma comment(lib, "OpenCL.lib")
+#define MAX_SOURCE_SIZE (0x100000)
+#define __CL_ENABLE_EXCEPTIONS
 //#define __NO_STD_VECTOR // Use cl::vector instead of STL version
-//#include <CL/cl.hpp>
-//#include <cstdlib>
-//#include <string>
-//#include <iterator>
+
+#define CL_USE_DEPRECATED_OPENCL_1_1_APIS
+#include <CL/cl.h>
+#undef CL_VERSION_1_2
+#include <CL/cl.hpp>
+
+#include <cstdlib>
+#include <string>
 
 // Windows only
 #include <algorithm>
@@ -567,6 +576,105 @@ void GetConfig()
 	config.totFrames = config.framerate * config.duration;
 }
 
+void OpenCL()
+{
+	const int LIST_SIZE = 1024;
+	int i;
+	int *A = (int*)malloc(sizeof(int)*LIST_SIZE);
+	int *B = (int*)malloc(sizeof(int)*LIST_SIZE);
+	for (i = 0; i < LIST_SIZE; i++) {
+		A[i] = i;
+		B[i] = LIST_SIZE - i;
+	}
+
+	// Load the kernel source code into the array source_str
+	FILE *fp;
+	char *source_str;
+	size_t source_size;
+
+	fp = fopen("vector_add_kernel.cl", "r");
+	if (!fp) {
+		fprintf(stderr, "Failed to load kernel.\n");
+		exit(1);
+	}
+	source_str = (char*)malloc(MAX_SOURCE_SIZE);
+	source_size = fread(source_str, 1, MAX_SOURCE_SIZE, fp);
+	fclose(fp);
+
+	// Get platform and device information
+	cl_platform_id platform_id = NULL;
+	cl_device_id device_id = NULL;
+	cl_uint ret_num_devices;
+	cl_uint ret_num_platforms;
+	cl_int ret = clGetPlatformIDs(1, &platform_id, &ret_num_platforms);
+	ret = clGetDeviceIDs(platform_id, CL_DEVICE_TYPE_DEFAULT, 1,
+		&device_id, &ret_num_devices);
+
+	// Create an OpenCL context
+	cl_context context = clCreateContext(NULL, 1, &device_id, NULL, NULL, &ret);
+
+	// Create a command queue
+	cl_command_queue command_queue = clCreateCommandQueue(context, device_id, 0, &ret);
+
+	// Create memory buffers on the device for each vector 
+	cl_mem a_mem_obj = clCreateBuffer(context, CL_MEM_READ_ONLY,
+		LIST_SIZE * sizeof(int), NULL, &ret);
+	cl_mem b_mem_obj = clCreateBuffer(context, CL_MEM_READ_ONLY,
+		LIST_SIZE * sizeof(int), NULL, &ret);
+	cl_mem c_mem_obj = clCreateBuffer(context, CL_MEM_WRITE_ONLY,
+		LIST_SIZE * sizeof(int), NULL, &ret);
+
+	// Copy the lists A and B to their respective memory buffers
+	ret = clEnqueueWriteBuffer(command_queue, a_mem_obj, CL_TRUE, 0,
+		LIST_SIZE * sizeof(int), A, 0, NULL, NULL);
+	ret = clEnqueueWriteBuffer(command_queue, b_mem_obj, CL_TRUE, 0,
+		LIST_SIZE * sizeof(int), B, 0, NULL, NULL);
+
+	// Create a program from the kernel source
+	cl_program program = clCreateProgramWithSource(context, 1,
+		(const char **)&source_str, (const size_t *)&source_size, &ret);
+
+	// Build the program
+	ret = clBuildProgram(program, 1, &device_id, NULL, NULL, NULL);
+
+	// Create the OpenCL kernel
+	cl_kernel kernel = clCreateKernel(program, "vector_add", &ret);
+
+	// Set the arguments of the kernel
+	ret = clSetKernelArg(kernel, 0, sizeof(cl_mem), (void *)&a_mem_obj);
+	ret = clSetKernelArg(kernel, 1, sizeof(cl_mem), (void *)&b_mem_obj);
+	ret = clSetKernelArg(kernel, 2, sizeof(cl_mem), (void *)&c_mem_obj);
+
+	// Execute the OpenCL kernel on the list
+	size_t global_item_size = LIST_SIZE; // Process the entire lists
+	size_t local_item_size = 64; // Divide work items into groups of 64
+	ret = clEnqueueNDRangeKernel(command_queue, kernel, 1, NULL,
+		&global_item_size, &local_item_size, 0, NULL, NULL);
+
+	// Read the memory buffer C on the device to the local variable C
+	int *C = (int*)malloc(sizeof(int)*LIST_SIZE);
+	ret = clEnqueueReadBuffer(command_queue, c_mem_obj, CL_TRUE, 0,
+		LIST_SIZE * sizeof(int), C, 0, NULL, NULL);
+
+	// Display the result to the screen
+	for (i = 0; i < LIST_SIZE; i++)
+		printf("%d + %d = %d\n", A[i], B[i], C[i]);
+
+	// Clean up
+	ret = clFlush(command_queue);
+	ret = clFinish(command_queue);
+	ret = clReleaseKernel(kernel);
+	ret = clReleaseProgram(program);
+	ret = clReleaseMemObject(a_mem_obj);
+	ret = clReleaseMemObject(b_mem_obj);
+	ret = clReleaseMemObject(c_mem_obj);
+	ret = clReleaseCommandQueue(command_queue);
+	ret = clReleaseContext(context);
+	free(A);
+	free(B);
+	free(C);
+}
+
 //[comment]
 // In the main function, we will create the scene which is composed of 5 spheres
 // and 1 light (which is also a sphere). Then, once the scene description is complete
@@ -576,6 +684,8 @@ int main(int argc, char **argv)
 {
 	// This sample only allows one choice per program execution. Feel free to improve upon this
 	srand(13);
+
+	OpenCL();
 
 	GetConfig();
 
@@ -600,101 +710,3 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-
-
-
-
-
-
-/*
-void BasicRender()
-{
-std::vector<Sphere> spheres;
-// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
-
-spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 4, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // The radius paramter is the value we will change
-spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-
-// This creates a file, titled 1.ppm in the current working directory
-render(spheres, 1);
-
-}
-
-void SimpleShrinking()
-{
-std::vector<Sphere> spheres;
-// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
-
-for (int i = 0; i < 4; i++)
-{
-if (i == 0)
-{
-spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 4, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // The radius paramter is the value we will change
-spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-
-}
-else if (i == 1)
-{
-spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 3, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
-spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-}
-else if (i == 2)
-{
-spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 2, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
-spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-}
-else if (i == 3)
-{
-spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-spheres.push_back(Sphere(Vec3f(0.0, 0, -20), 1, Vec3f(1.00, 0.32, 0.36), 1, 0.5)); // Radius--
-spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-}
-
-render(spheres, i);
-// Dont forget to clear the Vector holding the spheres.
-spheres.clear();
-}
-}
-
-void SmoothScaling()
-{
-std::vector<Sphere> spheres;
-// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
-
-int totalFrames = VIDEO_FPS * VIDEO_LENGTH;
-
-for (float r = 0; r <= totalFrames; r++)
-{
-// TODO: Rotate spheres around a point over each frame
-
-// Moving sphere. (r / totalFrames) changes radius over time
-spheres.push_back(Sphere(Vec3f(0.0, 0, -20),
-r / totalFrames,
-Vec3f(1.00, 0.32, 0.36),
-1,
-0.5));
-
-// Static spheres
-//spheres.push_back(Sphere(Vec3f(0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-spheres.push_back(Sphere(Vec3f(5.0, -1, -15), 2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
-spheres.push_back(Sphere(Vec3f(5.0, 0, -25), 3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
-
-render(spheres, r);
-
-std::cout << "Rendered and saved spheres" << r << ".ppm" << std::endl;
-
-// Dont forget to clear the Vector holding the spheres.
-spheres.clear();
-}
-}
-
-*/
