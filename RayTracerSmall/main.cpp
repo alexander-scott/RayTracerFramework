@@ -9,20 +9,6 @@
 #include <iterator>
 #include <utility>
 
-// Open CL
-#pragma comment(lib, "OpenCL.lib")
-#define MAX_SOURCE_SIZE (0x100000)
-#define __CL_ENABLE_EXCEPTIONS
-//#define __NO_STD_VECTOR // Use cl::vector instead of STL version
-
-#define CL_USE_DEPRECATED_OPENCL_1_1_APIS
-#include <CL/cl.h>
-#undef CL_VERSION_1_2
-#include <CL/cl.hpp>
-
-#include <cstdlib>
-#include <string>
-
 // Windows only
 #include <algorithm>
 #include <sstream>
@@ -73,25 +59,46 @@ public:
 
 typedef Vec3<float> Vec3f;
 
-class Sphere
+enum ObjectType { Sphere };
+
+class ObjectDetails {
+public:
+	float radius = 0;
+	float lenth = 0;
+	float height = 0;
+
+	ObjectDetails() { }
+
+	ObjectDetails(
+		const float &rad,
+		const float &len,
+		const float &hei) : 
+		radius(rad), lenth(len), height(hei)
+	{ }
+};
+
+class Object
 {
 public:
-	Vec3f center;                           /// position of the sphere
-	float radius, radius2;                  /// sphere radius and radius^2
+	Vec3f center;                           /// position of the object
+	ObjectType objectType;					/// type of object (sphere or cube)
+	ObjectDetails objectDetails;			/// size of the object
+	float radius2;							/// radius ^2
 	Vec3f surfaceColor, emissionColor;      /// surface color and emission (light)
 	float transparency, reflection;         /// surface transparency and reflectivity
 
-	Sphere() {}
+	Object() {}
 
-	Sphere(
-		const Vec3f &c,
-		const float &r,
+	Object(
+		const Vec3f &cent,
+		const ObjectType &type,
+		const ObjectDetails details,
 		const Vec3f &sc,
 		const float &refl = 0,
 		const float &transp = 0,
 		const Vec3f &ec = 0) :
-		center(c), radius(r), radius2(r * r), surfaceColor(sc), emissionColor(ec),
-		transparency(transp), reflection(refl)
+		center(cent), objectType(type), surfaceColor(sc), objectDetails(details), radius2(details.radius * details.radius),
+	    emissionColor(ec), transparency(transp), reflection(refl)
 	{ /* empty */
 	}
 
@@ -100,16 +107,32 @@ public:
 	//[/comment]
 	bool intersect(const Vec3f &rayorig, const Vec3f &raydir, float &t0, float &t1) const
 	{
-		Vec3f l = center - rayorig;
-		float tca = l.dot(raydir);
-		if (tca < 0) return false;
-		float d2 = l.dot(l) - tca * tca;
-		if (d2 > radius2) return false;
-		float thc = sqrt(radius2 - d2);
-		t0 = tca - thc;
-		t1 = tca + thc;
+		switch (objectType)
+		{
+		case Sphere:
+			Vec3f l = center - rayorig;
+			float tca = l.dot(raydir); // ANGLE
 
-		return true;
+			if (tca < 0)
+			{
+				return false;
+			}
+
+			float d2 = l.dot(l) - tca * tca;
+
+			if (d2 > radius2)
+			{
+				return false;
+			}
+
+			float thc = sqrt(radius2 - d2);
+			t0 = tca - thc;
+			t1 = tca + thc;
+
+			return true;
+		}
+
+		return false;
 	}
 };
 
@@ -166,12 +189,12 @@ float mix(const float &a, const float &b, const float &mix)
 Vec3f trace(
 	const Vec3f &rayorig,
 	const Vec3f &raydir,
-	const std::vector<Sphere> &spheres,
+	const std::vector<Object> &spheres,
 	const int &depth)
 {
 	//if (raydir.length() != 1) std::cerr << "Error " << raydir << std::endl;
 	float tnear = INFINITY;
-	const Sphere* sphere = NULL;
+	const Object* sphere = NULL;
 
 	// find intersection of this ray with the sphere in the scene
 	for (unsigned i = 0; i < spheres.size(); ++i)
@@ -289,7 +312,7 @@ Vec3f trace(
 // trace it and return a color. If the ray hits a sphere, we return the color of the
 // sphere at the intersection point, else we return the background color.
 //[/comment]
-void render(const std::vector<Sphere> &spheres, int iteration, int threadNumber)
+void render(const std::vector<Object> &spheres, int iteration, int threadNumber)
 {
 	start = std::chrono::system_clock::now();
 
@@ -401,7 +424,7 @@ Vec3f rotate_point(Vec3f o, float angle, Vec3f p, Axis axis)
 
 void SolarSystem(int start, int finish, int threadNumber)
 {
-	std::vector<Sphere> spheres;
+	std::vector<Object> spheres;
 	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
 
 	if (!performThreading)
@@ -413,7 +436,7 @@ void SolarSystem(int start, int finish, int threadNumber)
 	for (float r = start; r <= config.totFrames && r <= finish; r++)
 	{
 		// Sun
-		spheres.push_back(Sphere(ORIGIN, 15, Vec3f(1, 0.27, 0.0), 1, 0.5));
+		spheres.push_back(Object(ORIGIN, Sphere, ObjectDetails(15, 0, 0), Vec3f(1, 0.27, 0.0), 1, 0.5));
 
 		/*
 		How to use rotate_point:
@@ -426,24 +449,24 @@ void SolarSystem(int start, int finish, int threadNumber)
 
 		// Mercury
 		Vec3f newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (6)), Vec3f(20.00, 0.32, ORIGIN.z), YAxis);
-		spheres.push_back(Sphere(newPos, 2, Vec3f(0.75, 0.75, 0.75), 1, 0.5));
+		spheres.push_back(Object(newPos, Sphere, ObjectDetails(2, 0, 0), Vec3f(0.75, 0.75, 0.75), 1, 0.5));
 
 		// Venus
 		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (4)), Vec3f(-30.00, 0.32, ORIGIN.z), YAxis);
-		spheres.push_back(Sphere(newPos, 3, Vec3f(0.83, 0.92, 0.82), 1, 0.5));
+		spheres.push_back(Object(newPos, Sphere, ObjectDetails(3, 0, 0), Vec3f(0.83, 0.92, 0.82), 1, 0.5));
 
 		// Earth
 		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (3)), Vec3f(0, 0.32, ORIGIN.z + 40), YAxis);
-		Sphere earth = Sphere(newPos, 3.5, Vec3f(0.63, 0.90, 0.94), 1, 0.5);
+		Object earth = Object(newPos, Sphere, ObjectDetails(3.5, 0, 0), Vec3f(0.63, 0.90, 0.94), 1, 0.5);
 		spheres.push_back(earth);
 
 		// Moon
 		newPos = rotate_point(earth.center, ((r / config.totFrames) * (10)), Vec3f(earth.center.x, earth.center.y, earth.center.z + 5), YAxis);
-		spheres.push_back(Sphere(newPos, 1, Vec3f(0.75, 0.75, 0.75), 1, 0.5));
+		spheres.push_back(Object(newPos, Sphere, ObjectDetails(1, 0, 0), Vec3f(0.75, 0.75, 0.75), 1, 0.5));
 
 		// Mars
 		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (5)), Vec3f(0, 0.32, ORIGIN.z - 50.00), YAxis);
-		spheres.push_back(Sphere(newPos, 3, Vec3f(1.00, 0.32, -20.36), 0.5, 0.5));
+		spheres.push_back(Object(newPos, Sphere, ObjectDetails(3, 0, 0), Vec3f(1.00, 0.32, -20.36), 3, 0.5, 0.5));
 
 		if (performThreading)
 		{
@@ -576,105 +599,6 @@ void GetConfig()
 	config.totFrames = config.framerate * config.duration;
 }
 
-void OpenCL()
-{
-	const int LIST_SIZE = 1024;
-	int i;
-	int *A = (int*)malloc(sizeof(int)*LIST_SIZE);
-	int *B = (int*)malloc(sizeof(int)*LIST_SIZE);
-	for (i = 0; i < LIST_SIZE; i++) {
-		A[i] = i;
-		B[i] = LIST_SIZE - i;
-	}
-
-	// Load the kernel source code into the array source_str
-	FILE *fp;
-	char *source_str;
-	size_t source_size;
-
-	fp = fopen("vector_add_kernel.cl", "r");
-	if (!fp) {
-		fprintf(stderr, "Failed to load kernel.\n");
-		exit(1);
-	}
-	source_str = (char*)malloc(MAX_SOURCE_SIZE);
-	source_size = fread(source_str, 1, MAX_SOURCE_SIZE, fp);
-	fclose(fp);
-
-	// Get platform and device information
-	cl_platform_id platform_id = NULL;
-	cl_device_id device_id = NULL;
-	cl_uint ret_num_devices;
-	cl_uint ret_num_platforms;
-	cl_int ret = clGetPlatformIDs(1, &platform_id, &ret_num_platforms);
-	ret = clGetDeviceIDs(platform_id, CL_DEVICE_TYPE_DEFAULT, 1,
-		&device_id, &ret_num_devices);
-
-	// Create an OpenCL context
-	cl_context context = clCreateContext(NULL, 1, &device_id, NULL, NULL, &ret);
-
-	// Create a command queue
-	cl_command_queue command_queue = clCreateCommandQueue(context, device_id, 0, &ret);
-
-	// Create memory buffers on the device for each vector 
-	cl_mem a_mem_obj = clCreateBuffer(context, CL_MEM_READ_ONLY,
-		LIST_SIZE * sizeof(int), NULL, &ret);
-	cl_mem b_mem_obj = clCreateBuffer(context, CL_MEM_READ_ONLY,
-		LIST_SIZE * sizeof(int), NULL, &ret);
-	cl_mem c_mem_obj = clCreateBuffer(context, CL_MEM_WRITE_ONLY,
-		LIST_SIZE * sizeof(int), NULL, &ret);
-
-	// Copy the lists A and B to their respective memory buffers
-	ret = clEnqueueWriteBuffer(command_queue, a_mem_obj, CL_TRUE, 0,
-		LIST_SIZE * sizeof(int), A, 0, NULL, NULL);
-	ret = clEnqueueWriteBuffer(command_queue, b_mem_obj, CL_TRUE, 0,
-		LIST_SIZE * sizeof(int), B, 0, NULL, NULL);
-
-	// Create a program from the kernel source
-	cl_program program = clCreateProgramWithSource(context, 1,
-		(const char **)&source_str, (const size_t *)&source_size, &ret);
-
-	// Build the program
-	ret = clBuildProgram(program, 1, &device_id, NULL, NULL, NULL);
-
-	// Create the OpenCL kernel
-	cl_kernel kernel = clCreateKernel(program, "vector_add", &ret);
-
-	// Set the arguments of the kernel
-	ret = clSetKernelArg(kernel, 0, sizeof(cl_mem), (void *)&a_mem_obj);
-	ret = clSetKernelArg(kernel, 1, sizeof(cl_mem), (void *)&b_mem_obj);
-	ret = clSetKernelArg(kernel, 2, sizeof(cl_mem), (void *)&c_mem_obj);
-
-	// Execute the OpenCL kernel on the list
-	size_t global_item_size = LIST_SIZE; // Process the entire lists
-	size_t local_item_size = 64; // Divide work items into groups of 64
-	ret = clEnqueueNDRangeKernel(command_queue, kernel, 1, NULL,
-		&global_item_size, &local_item_size, 0, NULL, NULL);
-
-	// Read the memory buffer C on the device to the local variable C
-	int *C = (int*)malloc(sizeof(int)*LIST_SIZE);
-	ret = clEnqueueReadBuffer(command_queue, c_mem_obj, CL_TRUE, 0,
-		LIST_SIZE * sizeof(int), C, 0, NULL, NULL);
-
-	// Display the result to the screen
-	for (i = 0; i < LIST_SIZE; i++)
-		printf("%d + %d = %d\n", A[i], B[i], C[i]);
-
-	// Clean up
-	ret = clFlush(command_queue);
-	ret = clFinish(command_queue);
-	ret = clReleaseKernel(kernel);
-	ret = clReleaseProgram(program);
-	ret = clReleaseMemObject(a_mem_obj);
-	ret = clReleaseMemObject(b_mem_obj);
-	ret = clReleaseMemObject(c_mem_obj);
-	ret = clReleaseCommandQueue(command_queue);
-	ret = clReleaseContext(context);
-	free(A);
-	free(B);
-	free(C);
-}
-
 //[comment]
 // In the main function, we will create the scene which is composed of 5 spheres
 // and 1 light (which is also a sphere). Then, once the scene description is complete
@@ -684,8 +608,6 @@ int main(int argc, char **argv)
 {
 	// This sample only allows one choice per program execution. Feel free to improve upon this
 	srand(13);
-
-	OpenCL();
 
 	GetConfig();
 

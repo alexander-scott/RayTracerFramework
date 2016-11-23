@@ -1,4 +1,4 @@
-framerate: 60
+framerate: 30
 width: 640
 height: 480
 duration: 5
