@@ -64,7 +64,8 @@ enum ObjectType { Sphere, Cube };
 class ObjectDetails {
 public:
 	float radius = 0;
-	float depth = 0;
+	float radius2; // Radius ^2
+	float depth = 0; 
 	float height = 0;
 	float width = 0;
 
@@ -75,7 +76,7 @@ public:
 		const float &dep,
 		const float &hei,
 		const float &wid) :
-		radius(rad), depth(dep), height(hei), width(wid)
+		radius(rad), depth(dep), height(hei), width(wid), radius2(radius * radius)
 	{ }
 };
 
@@ -85,7 +86,6 @@ public:
 	Vec3f center;                           /// position of the object
 	ObjectType objectType;					/// type of object (sphere or cube)
 	ObjectDetails objectDetails;			/// size of the object
-	float radius2;							/// radius ^2
 	Vec3f surfaceColor, emissionColor;      /// surface color and emission (light)
 	float transparency, reflection;         /// surface transparency and reflectivity
 
@@ -94,18 +94,18 @@ public:
 	Object(
 		const Vec3f &cent,
 		const ObjectType &type,
-		const ObjectDetails details,
+		const ObjectDetails &details,
 		const Vec3f &sc,
 		const float &refl = 0,
 		const float &transp = 0,
 		const Vec3f &ec = 0) :
-		center(cent), objectType(type), surfaceColor(sc), objectDetails(details), radius2(details.radius * details.radius),
+		center(cent), objectType(type), surfaceColor(sc), objectDetails(details),
 		emissionColor(ec), transparency(transp), reflection(refl)
 	{ /* empty */
 	}
 
 	//[comment]
-	// Compute a ray-sphere intersection using the geometric solution
+	// Compute a ray-object intersection using the geometric solution
 	//[/comment]
 	bool intersect(const Vec3f &rayorig, const Vec3f &raydir, float &t0, float &t1) const
 	{
@@ -123,19 +123,19 @@ public:
 
 			float d2 = l.dot(l) - tca * tca;
 
-			if (d2 > radius2)
+			if (d2 > objectDetails.radius2)
 			{
 				return false;
 			}
 
-			float thc = sqrt(radius2 - d2);
+			float thc = sqrt(objectDetails.radius2 - d2);
 			t0 = tca - thc;
 			t1 = tca + thc;
 
 			return true;
 		}
 
-		case Cube: // BROEKN
+		case Cube:
 		{
 			Vec3f cubeMin;
 			cubeMin.x = (center.x - (objectDetails.width / 2));
@@ -154,15 +154,15 @@ public:
 			dirfrac.y = 1.0f / raydir.y;
 			dirfrac.z = 1.0f / raydir.z;
 
-			float t01 = (cubeMin.x - rayorig.x)*dirfrac.x;
+			float t = (cubeMin.x - rayorig.x)*dirfrac.x;
 			float t2 = (cubeMax.x - rayorig.x)*dirfrac.x;
 			float t3 = (cubeMin.y - rayorig.y)*dirfrac.y;
 			float t4 = (cubeMax.y - rayorig.y)*dirfrac.y;
 			float t5 = (cubeMin.z - rayorig.z)*dirfrac.z;
 			float t6 = (cubeMax.z - rayorig.z)*dirfrac.z;
 
-			t0 = std::max(std::max(std::min(t01, t2), std::min(t3, t4)), std::min(t5, t6));
-			t1 = std::min(std::min(std::max(t01, t2), std::max(t3, t4)), std::max(t5, t6));
+			t0 = std::max(std::max(std::min(t, t2), std::min(t3, t4)), std::min(t5, t6));
+			t1 = std::min(std::min(std::max(t, t2), std::max(t3, t4)), std::max(t5, t6));
 
 			// if t0 < 0, ray (line) is intersecting AABB, but whole AABB is behing us
 			if (t0 < 0)
@@ -186,12 +186,14 @@ public:
 
 struct DriverInfo {
 	bool doThreading; // If true the code will go down the threading route
+	bool solarSystem; // If true the solar system scene will be displayed
 	float framerate; // The frames per second of the video
 	int width;
 	int height;
 	int duration; // The length in second of the video
 	int maxRayDepth; // This variable controls the maximum recursion depth
 	std::string folderName; // The name of the folder that the .PPM frames will be temporarily saved to
+	int movementSpeed; // The movement speed of the solar system (1-10)
 
 	float totFrames;
 };
@@ -207,7 +209,7 @@ DriverInfo config;
 #endif
 
 enum Axis { XAxis, YAxis, ZAxis };
-const Vec3f ORIGIN = Vec3f(0.0, 0, -200);
+const Vec3f ORIGIN = Vec3f(0.0, 0, -300);
 
 // Start and end timers
 std::chrono::time_point<std::chrono::system_clock> start;
@@ -242,7 +244,7 @@ Vec3f trace(
 	float tnear = INFINITY;
 	const Object* object = NULL;
 
-	// find intersection of this ray with the sphere in the scene
+	// find intersection of this ray with the object in the scene
 	for (unsigned i = 0; i < objects.size(); ++i)
 	{
 		float t0 = INFINITY, t1 = INFINITY;
@@ -274,7 +276,7 @@ Vec3f trace(
 
 	nhit.normalize(); // normalize normal direction
 					  // If the normal and the view direction are not opposite to each other
-					  // reverse the normal direction. That also means we are inside the sphere so set
+					  // reverse the normal direction. That also means we are inside the object so set
 					  // the inside bool to true. Finally reverse the sign of IdotN which we want
 					  // positive.
 
@@ -302,7 +304,7 @@ Vec3f trace(
 		Vec3f reflection = trace(phit + nhit * bias, refldir, objects, depth + 1);
 		Vec3f refraction = 0;
 
-		// if the sphere is also transparent compute refraction ray (transmission)
+		// if the object is also transparent compute refraction ray (transmission)
 		if (object->transparency)
 		{
 			float ior = 1.1, eta = (inside) ? ior : 1 / ior; // are we inside or outside the surface?
@@ -314,7 +316,7 @@ Vec3f trace(
 			refraction = trace(phit - nhit * bias, refrdir, objects, depth + 1);
 		}
 
-		// the result is a mix of reflection and refraction (if the sphere is transparent)
+		// the result is a mix of reflection and refraction (if the object is transparent)
 		surfaceColor = (
 			reflection * fresneleffect +
 			refraction * (1 - fresneleffect) * object->transparency) * object->surfaceColor;
@@ -355,10 +357,10 @@ Vec3f trace(
 
 //[comment]
 // Main rendering function. We compute a camera ray for each pixel of the image
-// trace it and return a color. If the ray hits a sphere, we return the color of the
-// sphere at the intersection point, else we return the background color.
+// trace it and return a color. If the ray hits a object, we return the color of the
+// object at the intersection point, else we return the background color.
 //[/comment]
-void render(const std::vector<Object> &spheres, int iteration, int threadNumber)
+void render(const std::vector<Object> &objects, int iteration, int threadNumber)
 {
 	start = std::chrono::system_clock::now();
 
@@ -386,13 +388,13 @@ void render(const std::vector<Object> &spheres, int iteration, int threadNumber)
 
 			Vec3f raydir(xx, yy, -1);
 			raydir.normalize();
-			*pixel = trace(Vec3f(0, 20, 0), raydir, spheres, 0); // The Vec3f on this line is where the camera is positioned
+			*pixel = trace(Vec3f(0, 20, 0), raydir, objects, 0); // The Vec3f on this line is where the camera is positioned
 		}
 	}
 
 	// Save result to a PPM image (keep these flags if you compile under Windows)
 	std::stringstream ss;
-	ss << "./" << config.folderName << "/spheres" << iteration << ".ppm";
+	ss << "./" << config.folderName << "/objects" << iteration << ".ppm";
 	std::string tempString = ss.str();
 	char* filename = (char*)tempString.c_str();
 
@@ -470,8 +472,7 @@ Vec3f rotate_point(Vec3f o, float angle, Vec3f p, Axis axis)
 
 void SolarSystem(int start, int finish, int threadNumber)
 {
-	std::vector<Object> spheres;
-	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
+	std::vector<Object> objects;
 
 	if (!config.doThreading)
 	{
@@ -479,10 +480,13 @@ void SolarSystem(int start, int finish, int threadNumber)
 		finish = config.totFrames;
 	}
 
+	// OBJECT DEFINITION
+	// (POSITION, TYPE, DETAILS(RADIUS, DEPTH, HEIGHT, WIDTH), SURFACECOLOUR(R, G, B), REFLECTION, TRANSPARENCY, EMISSIONCOLOUR)
+
 	for (float r = start; r <= config.totFrames && r <= finish; r++)
 	{
 		// Sun
-		spheres.push_back(Object(ORIGIN, Sphere, ObjectDetails(15, 15, 15, 15), Vec3f(1, 0.27, 0.0), 1, 0.5));
+		objects.push_back(Object(ORIGIN, Sphere, ObjectDetails(15, 15, 15, 15), Vec3f(1, 0.64, 0.0), 0, 0, Vec3f(1, 0.64, 0.0)));
 
 		/*
 		How to use rotate_point:
@@ -494,38 +498,102 @@ void SolarSystem(int start, int finish, int threadNumber)
 		*/
 
 		// Mercury
-		Vec3f newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (6)), Vec3f(20.00, 0.32, ORIGIN.z), YAxis);
-		spheres.push_back(Object(newPos, Sphere, ObjectDetails(2, 2, 2, 2), Vec3f(0.75, 0.75, 0.75), 1, 0.5));
+		Vec3f newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (1.607 * config.movementSpeed)), Vec3f(20.00, 0.32, ORIGIN.z), YAxis);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(2, 2, 2, 2), Vec3f(0.75, 0.75, 0.75), 1, 0));
 
 		// Venus
-		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (4)), Vec3f(-30.00, 0.32, ORIGIN.z), YAxis);
-		spheres.push_back(Object(newPos, Sphere, ObjectDetails(3, 3, 3, 3), Vec3f(0.83, 0.92, 0.82), 1, 0.5));
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (1.174 * config.movementSpeed)), Vec3f(-30.00, 0.32, ORIGIN.z), YAxis);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(3, 3, 3, 3), Vec3f(0.83, 0.92, 0.82), 1, 0));
 
 		// Earth
-		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (3)), Vec3f(0, 0.32, ORIGIN.z + 40), YAxis);
-		Object earth = Object(newPos, Sphere, ObjectDetails(3.5, 3.5, 3.5, 3.5), Vec3f(0.63, 0.90, 0.94), 1, 0.5);
-		spheres.push_back(earth);
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (1 * config.movementSpeed)), Vec3f(0, 0.32, ORIGIN.z + 40), YAxis);
+		Object earth = Object(newPos, Sphere, ObjectDetails(3.5, 3.5, 3.5, 3.5), Vec3f(0.63, 0.90, 0.94), 1, 0);
+		objects.push_back(earth);
 
 		// Moon
-		newPos = rotate_point(earth.center, ((r / config.totFrames) * (10)), Vec3f(earth.center.x, earth.center.y, earth.center.z + 5), YAxis);
-		spheres.push_back(Object(newPos, Sphere, ObjectDetails(1, 1, 1, 1), Vec3f(0.75, 0.75, 0.75), 1, 0.5));
+		newPos = rotate_point(earth.center, ((r / config.totFrames) * (5 * config.movementSpeed)), Vec3f(earth.center.x, earth.center.y, earth.center.z + 5), YAxis);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(1, 1, 1, 1), Vec3f(0.75, 0.75, 0.75), 1, 0));
 
 		// Mars
-		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (5)), Vec3f(0, 0.32, ORIGIN.z - 50.00), YAxis);
-		spheres.push_back(Object(newPos, Sphere, ObjectDetails(3, 3, 3, 3), Vec3f(1.00, 0.32, -20.36), 3, 0.5, 0.5));
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (0.802 * config.movementSpeed)), Vec3f(0, 0.32, ORIGIN.z - 50.00), YAxis);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(3, 3, 3, 3), Vec3f(1.00, 0.32, 0), 1, 0));
+
+		// Jupiter
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (0.434 * config.movementSpeed)), Vec3f(70.00, 0.32, ORIGIN.z), YAxis);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(8.5, 8.5, 8.5, 8.5), Vec3f(0.78, 0.56, 0.22), 1, 0));
+
+		// Saturn
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (0.323 * config.movementSpeed)), Vec3f(-90.00, 0.32, ORIGIN.z), YAxis);
+		Object saturn = Object(newPos, Sphere, ObjectDetails(8, 8, 8, 8), Vec3f(0.76, 0.69, 0.50), 1, 0);
+		objects.push_back(saturn);
+
+		// Saturns ring
+		newPos = rotate_point(saturn.center, ((r / config.totFrames) * (5 * config.movementSpeed)), Vec3f(saturn.center.x, saturn.center.y, saturn.center.z + 5), YAxis);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(1, 1, 1, 1), Vec3f(0.75, 0.75, 0.75), 1, 0));
+		
+		// Uranus
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (0.228 * config.movementSpeed)), Vec3f(0, 0.32, ORIGIN.z + 110), YAxis);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(5, 5, 5, 5), Vec3f(0.52, 0.80, 0.98), 1, 0));
+
+		// Neptune
+		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (0.182 * config.movementSpeed)), Vec3f(0, 0.32, ORIGIN.z - 130), YAxis);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(5, 5, 5, 5), Vec3f(0.52, 0.80, 0.98), 1, 0));
 
 		if (config.doThreading)
 		{
-			render(spheres, r, threadNumber);
+			render(objects, r, threadNumber);
 		}
 		else
 		{
-			render(spheres, r, 0);
+			render(objects, r, 0);
 		}
 
-		spheres.clear();
+		objects.clear();
 	}
 }
+
+void FallingCubes(int start, int finish, int threadNumber)
+{
+	std::vector<Object> objects;
+	std::vector<Object> objectPool;
+
+	if (!config.doThreading)
+	{
+		start = 0;
+		finish = config.totFrames;
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 10; j++)
+		{
+			objects.push_back(Object(Vec3f(i * 15, -50 + (rand() % 50), ORIGIN.z - j * 15), Cube, ObjectDetails(5, 5, 5, 5), Vec3f(1, 0.64, 0.0), 0, 0, Vec3f(1, 0.64, 0.0)));
+		}
+	}
+
+	for (float r = start; r <= config.totFrames && r <= finish; r++)
+	{
+		for (int i = 0; i < objectPool.size(); i++)
+		{
+			objects.push_back(Object(objectPool[i]));
+			objects.push_back(Object(Vec3f(objectPool[i].center.x, objectPool[i].center.y - ((r / config.totFrames) * (0.1 * config.movementSpeed)), 
+				objectPool[i].center.z), objectPool[i].objectType, objectPool[i].objectDetails, objectPool[i].surfaceColor, 
+				objectPool[i].reflection, objectPool[i].transparency, objectPool[i].emissionColor));
+		}
+
+		if (config.doThreading)
+		{
+			render(objects, r, threadNumber);
+		}
+		else
+		{
+			render(objects, r, 0);
+		}
+
+		objects.clear();
+	}
+}
+
 
 void DoThreading()
 {
@@ -535,7 +603,14 @@ void DoThreading()
 
 	for (int i = 0; i < num_threads; ++i)
 	{
-		threadPool[i] = std::thread(SolarSystem, i * difference, i * difference + difference, i);
+		if (config.solarSystem)
+		{
+			threadPool[i] = std::thread(SolarSystem, i * difference, i * difference + difference, i);
+		}
+		else 
+		{
+			threadPool[i] = std::thread(FallingCubes, i * difference, i * difference + difference, i);
+		}
 	}
 
 	//Join the threads with the main thread
@@ -548,7 +623,7 @@ void DoThreading()
 void CreateVideo()
 {
 	std::stringstream ss;
-	ss << "ffmpeg -y -f image2 -r " << config.framerate << " -i ./" << config.folderName << "/spheres%d.ppm -b 600k ./out.mp4";
+	ss << "ffmpeg -y -f image2 -r " << config.framerate << " -i ./" << config.folderName << "/objects%d.ppm -b 600k ./out.mp4";
 
 	start = std::chrono::system_clock::now();
 
@@ -614,6 +689,19 @@ void GetConfig()
 				config.doThreading = false;
 			}
 		}
+		else if (line.compare(0, 11, "solarSystem") == 0)
+		{
+			line.erase(0, 13);
+			int ss = std::stoi(line);
+			if (ss == 1)
+			{
+				config.solarSystem = true;
+			}
+			else
+			{
+				config.solarSystem = false;
+			}
+		}
 		else if (line.compare(0, 9, "framerate") == 0)
 		{
 			line.erase(0, 11);
@@ -648,6 +736,12 @@ void GetConfig()
 			line.erase(0, 12);
 			config.folderName = line;
 		}
+		else if (line.compare(0, 13, "movementSpeed") == 0)
+		{
+			line.erase(0, 15);
+			int ms = std::stoi(line);
+			config.movementSpeed = ms;
+		}
 	}
 
 	if (config.folderName == "")
@@ -659,8 +753,8 @@ void GetConfig()
 }
 
 //[comment]
-// In the main function, we will create the scene which is composed of 5 spheres
-// and 1 light (which is also a sphere). Then, once the scene description is complete
+// In the main function, we will create the scene which is composed of 5 objects
+// and 1 light (which is also a objects). Then, once the scene description is complete
 // we render that scene, by calling the render() function.
 //[/comment]
 int main(int argc, char **argv)
@@ -678,7 +772,14 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		SolarSystem(0, 0, 0);
+		if (config.solarSystem)
+		{
+			SolarSystem(0, 0, 0);
+		}
+		else 
+		{
+			FallingCubes(0, 0, 0);
+		}
 	}
 
 #ifdef _DEBUG
