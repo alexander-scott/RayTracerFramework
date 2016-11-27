@@ -59,21 +59,23 @@ public:
 
 typedef Vec3<float> Vec3f;
 
-enum ObjectType { Sphere };
+enum ObjectType { Sphere, Cube };
 
 class ObjectDetails {
 public:
 	float radius = 0;
-	float lenth = 0;
+	float depth = 0;
 	float height = 0;
+	float width = 0;
 
 	ObjectDetails() { }
 
 	ObjectDetails(
 		const float &rad,
-		const float &len,
-		const float &hei) : 
-		radius(rad), lenth(len), height(hei)
+		const float &dep,
+		const float &hei,
+		const float &wid) :
+		radius(rad), depth(dep), height(hei), width(wid)
 	{ }
 };
 
@@ -98,7 +100,7 @@ public:
 		const float &transp = 0,
 		const Vec3f &ec = 0) :
 		center(cent), objectType(type), surfaceColor(sc), objectDetails(details), radius2(details.radius * details.radius),
-	    emissionColor(ec), transparency(transp), reflection(refl)
+		emissionColor(ec), transparency(transp), reflection(refl)
 	{ /* empty */
 	}
 
@@ -110,6 +112,7 @@ public:
 		switch (objectType)
 		{
 		case Sphere:
+		{
 			Vec3f l = center - rayorig;
 			float tca = l.dot(raydir); // ANGLE
 
@@ -132,11 +135,57 @@ public:
 			return true;
 		}
 
+		case Cube: // BROEKN
+		{
+			Vec3f cubeMin;
+			cubeMin.x = (center.x - (objectDetails.width / 2));
+			cubeMin.y = (center.y - (objectDetails.height / 2));
+			cubeMin.z = (center.z - (objectDetails.depth / 2));
+
+			Vec3f cubeMax;
+			cubeMax.x = (center.x + (objectDetails.width / 2));
+			cubeMax.y = (center.y + (objectDetails.height / 2));
+			cubeMax.z = (center.z + (objectDetails.depth / 2));
+
+			Vec3f dirfrac;
+
+			// r.dir is unit direction vector of ray
+			dirfrac.x = 1.0f / raydir.x;
+			dirfrac.y = 1.0f / raydir.y;
+			dirfrac.z = 1.0f / raydir.z;
+
+			float t01 = (cubeMin.x - rayorig.x)*dirfrac.x;
+			float t2 = (cubeMax.x - rayorig.x)*dirfrac.x;
+			float t3 = (cubeMin.y - rayorig.y)*dirfrac.y;
+			float t4 = (cubeMax.y - rayorig.y)*dirfrac.y;
+			float t5 = (cubeMin.z - rayorig.z)*dirfrac.z;
+			float t6 = (cubeMax.z - rayorig.z)*dirfrac.z;
+
+			t0 = std::max(std::max(std::min(t01, t2), std::min(t3, t4)), std::min(t5, t6));
+			t1 = std::min(std::min(std::max(t01, t2), std::max(t3, t4)), std::max(t5, t6));
+
+			// if t0 < 0, ray (line) is intersecting AABB, but whole AABB is behing us
+			if (t0 < 0)
+			{
+				return false;
+			}
+
+			// if t0 > t1, ray doesn't intersect AABB
+			if (t0 > t1)
+			{
+				return false;
+			}
+
+			return true;
+		}
+		}
+
 		return false;
 	}
 };
 
 struct DriverInfo {
+	bool doThreading; // If true the code will go down the threading route
 	float framerate; // The frames per second of the video
 	int width;
 	int height;
@@ -168,9 +217,6 @@ std::chrono::duration<double> total_elapsed_time;
 // Thead pool
 static const int num_threads = 10;
 
-// If true the code will go down the threading route
-bool performThreading = true;
-
 float mix(const float &a, const float &b, const float &mix)
 {
 	return b * mix + a * (1 - mix);
@@ -189,19 +235,19 @@ float mix(const float &a, const float &b, const float &mix)
 Vec3f trace(
 	const Vec3f &rayorig,
 	const Vec3f &raydir,
-	const std::vector<Object> &spheres,
+	const std::vector<Object> &objects,
 	const int &depth)
 {
 	//if (raydir.length() != 1) std::cerr << "Error " << raydir << std::endl;
 	float tnear = INFINITY;
-	const Object* sphere = NULL;
+	const Object* object = NULL;
 
 	// find intersection of this ray with the sphere in the scene
-	for (unsigned i = 0; i < spheres.size(); ++i)
+	for (unsigned i = 0; i < objects.size(); ++i)
 	{
 		float t0 = INFINITY, t1 = INFINITY;
 
-		if (spheres[i].intersect(rayorig, raydir, t0, t1))
+		if (objects[i].intersect(rayorig, raydir, t0, t1))
 		{
 			if (t0 < 0)
 			{
@@ -211,20 +257,20 @@ Vec3f trace(
 			if (t0 < tnear)
 			{
 				tnear = t0;
-				sphere = &spheres[i];
+				object = &objects[i];
 			}
 		}
 	}
 
 	// if there's no intersection return black or background color
-	if (!sphere)
+	if (!object)
 	{
 		return Vec3f(2);
 	}
 
 	Vec3f surfaceColor = 0; // color of the ray/surfaceof the object intersected by the ray
 	Vec3f phit = rayorig + raydir * tnear; // point of intersection
-	Vec3f nhit = phit - sphere->center; // normal at the intersection point
+	Vec3f nhit = phit - object->center; // normal at the intersection point
 
 	nhit.normalize(); // normalize normal direction
 					  // If the normal and the view direction are not opposite to each other
@@ -240,7 +286,7 @@ Vec3f trace(
 		nhit = -nhit, inside = true;
 	}
 
-	if ((sphere->transparency > 0 || sphere->reflection > 0) && depth < config.maxRayDepth)
+	if ((object->transparency > 0 || object->reflection > 0) && depth < config.maxRayDepth)
 	{
 		float facingratio = -raydir.dot(nhit);
 
@@ -253,11 +299,11 @@ Vec3f trace(
 
 		refldir.normalize();
 
-		Vec3f reflection = trace(phit + nhit * bias, refldir, spheres, depth + 1);
+		Vec3f reflection = trace(phit + nhit * bias, refldir, objects, depth + 1);
 		Vec3f refraction = 0;
 
 		// if the sphere is also transparent compute refraction ray (transmission)
-		if (sphere->transparency)
+		if (object->transparency)
 		{
 			float ior = 1.1, eta = (inside) ? ior : 1 / ior; // are we inside or outside the surface?
 			float cosi = -nhit.dot(raydir);
@@ -265,32 +311,32 @@ Vec3f trace(
 
 			Vec3f refrdir = raydir * eta + nhit * (eta *  cosi - sqrt(k));
 			refrdir.normalize();
-			refraction = trace(phit - nhit * bias, refrdir, spheres, depth + 1);
+			refraction = trace(phit - nhit * bias, refrdir, objects, depth + 1);
 		}
 
 		// the result is a mix of reflection and refraction (if the sphere is transparent)
 		surfaceColor = (
 			reflection * fresneleffect +
-			refraction * (1 - fresneleffect) * sphere->transparency) * sphere->surfaceColor;
+			refraction * (1 - fresneleffect) * object->transparency) * object->surfaceColor;
 	}
 	else
 	{
 		// it's a diffuse object, no need to raytrace any further
-		for (unsigned i = 0; i < spheres.size(); ++i)
+		for (unsigned i = 0; i < objects.size(); ++i)
 		{
-			if (spheres[i].emissionColor.x > 0)
+			if (objects[i].emissionColor.x > 0)
 			{
 				// this is a light
 				Vec3f transmission = 1;
-				Vec3f lightDirection = spheres[i].center - phit;
+				Vec3f lightDirection = objects[i].center - phit;
 				lightDirection.normalize();
 
-				for (unsigned j = 0; j < spheres.size(); ++j)
+				for (unsigned j = 0; j < objects.size(); ++j)
 				{
 					if (i != j)
 					{
 						float t0, t1;
-						if (spheres[j].intersect(phit + nhit * bias, lightDirection, t0, t1))
+						if (objects[j].intersect(phit + nhit * bias, lightDirection, t0, t1))
 						{
 							transmission = 0;
 							break;
@@ -298,13 +344,13 @@ Vec3f trace(
 					}
 				}
 
-				surfaceColor += sphere->surfaceColor * transmission *
-					std::max(float(0), nhit.dot(lightDirection)) * spheres[i].emissionColor;
+				surfaceColor += object->surfaceColor * transmission *
+					std::max(float(0), nhit.dot(lightDirection)) * objects[i].emissionColor;
 			}
 		}
 	}
 
-	return surfaceColor + sphere->emissionColor;
+	return surfaceColor + object->emissionColor;
 }
 
 //[comment]
@@ -427,7 +473,7 @@ void SolarSystem(int start, int finish, int threadNumber)
 	std::vector<Object> spheres;
 	// Vector structure for Sphere (position, radius, surface color, reflectivity, transparency, emission color)
 
-	if (!performThreading)
+	if (!config.doThreading)
 	{
 		start = 0;
 		finish = config.totFrames;
@@ -436,7 +482,7 @@ void SolarSystem(int start, int finish, int threadNumber)
 	for (float r = start; r <= config.totFrames && r <= finish; r++)
 	{
 		// Sun
-		spheres.push_back(Object(ORIGIN, Sphere, ObjectDetails(15, 0, 0), Vec3f(1, 0.27, 0.0), 1, 0.5));
+		spheres.push_back(Object(ORIGIN, Sphere, ObjectDetails(15, 15, 15, 15), Vec3f(1, 0.27, 0.0), 1, 0.5));
 
 		/*
 		How to use rotate_point:
@@ -449,26 +495,26 @@ void SolarSystem(int start, int finish, int threadNumber)
 
 		// Mercury
 		Vec3f newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (6)), Vec3f(20.00, 0.32, ORIGIN.z), YAxis);
-		spheres.push_back(Object(newPos, Sphere, ObjectDetails(2, 0, 0), Vec3f(0.75, 0.75, 0.75), 1, 0.5));
+		spheres.push_back(Object(newPos, Sphere, ObjectDetails(2, 2, 2, 2), Vec3f(0.75, 0.75, 0.75), 1, 0.5));
 
 		// Venus
 		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (4)), Vec3f(-30.00, 0.32, ORIGIN.z), YAxis);
-		spheres.push_back(Object(newPos, Sphere, ObjectDetails(3, 0, 0), Vec3f(0.83, 0.92, 0.82), 1, 0.5));
+		spheres.push_back(Object(newPos, Sphere, ObjectDetails(3, 3, 3, 3), Vec3f(0.83, 0.92, 0.82), 1, 0.5));
 
 		// Earth
 		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (3)), Vec3f(0, 0.32, ORIGIN.z + 40), YAxis);
-		Object earth = Object(newPos, Sphere, ObjectDetails(3.5, 0, 0), Vec3f(0.63, 0.90, 0.94), 1, 0.5);
+		Object earth = Object(newPos, Sphere, ObjectDetails(3.5, 3.5, 3.5, 3.5), Vec3f(0.63, 0.90, 0.94), 1, 0.5);
 		spheres.push_back(earth);
 
 		// Moon
 		newPos = rotate_point(earth.center, ((r / config.totFrames) * (10)), Vec3f(earth.center.x, earth.center.y, earth.center.z + 5), YAxis);
-		spheres.push_back(Object(newPos, Sphere, ObjectDetails(1, 0, 0), Vec3f(0.75, 0.75, 0.75), 1, 0.5));
+		spheres.push_back(Object(newPos, Sphere, ObjectDetails(1, 1, 1, 1), Vec3f(0.75, 0.75, 0.75), 1, 0.5));
 
 		// Mars
 		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (5)), Vec3f(0, 0.32, ORIGIN.z - 50.00), YAxis);
-		spheres.push_back(Object(newPos, Sphere, ObjectDetails(3, 0, 0), Vec3f(1.00, 0.32, -20.36), 3, 0.5, 0.5));
+		spheres.push_back(Object(newPos, Sphere, ObjectDetails(3, 3, 3, 3), Vec3f(1.00, 0.32, -20.36), 3, 0.5, 0.5));
 
-		if (performThreading)
+		if (config.doThreading)
 		{
 			render(spheres, r, threadNumber);
 		}
@@ -555,7 +601,20 @@ void GetConfig()
 
 	while (std::getline(infile, line, '\n'))
 	{
-		if (line.compare(0, 9, "framerate") == 0)
+		if (line.compare(0, 11, "doThreading") == 0)
+		{
+			line.erase(0, 13);
+			int thread = std::stoi(line);
+			if (thread == 1)
+			{
+				config.doThreading = true;
+			}
+			else
+			{
+				config.doThreading = false;
+			}
+		}
+		else if (line.compare(0, 9, "framerate") == 0)
 		{
 			line.erase(0, 11);
 			int fr = std::stoi(line);
@@ -613,7 +672,7 @@ int main(int argc, char **argv)
 
 	CreateFolder();
 
-	if (performThreading)
+	if (config.doThreading)
 	{
 		DoThreading();
 	}

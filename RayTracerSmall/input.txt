@@ -1,3 +1,4 @@
+doThreading: 1
 framerate: 30
 width: 640
 height: 480
