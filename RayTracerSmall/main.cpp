@@ -20,6 +20,9 @@
 // Threading
 #include <thread>
 
+// Mutex
+#include <mutex>
+
 template<typename T>
 class Vec3
 {
@@ -218,6 +221,8 @@ std::chrono::duration<double> total_elapsed_time;
 
 // Thead pool
 static const int num_threads = 10;
+
+std::mutex m;
 
 float mix(const float &a, const float &b, const float &mix)
 {
@@ -552,31 +557,44 @@ void SolarSystem(int start, int finish, int threadNumber)
 	}
 }
 
-void FallingCubes(int start, int finish, int threadNumber)
+std::vector<Object> GetCubes()
+{
+	std::vector<Object> objectPool;
+
+	for (int i = -2; i < 2; i++)
+	{
+		for (int j = -3; j < 3; j++)
+		{
+			objectPool.push_back(Object(
+				Vec3f(i * 15, (rand() % 50), -100 - j * 15),
+				Cube,
+				ObjectDetails(5, 5, 5, 5),
+				Vec3f(0.63, 0.90, 0.94), 
+				1, 
+				0));
+		}
+	}
+
+	return objectPool;
+}
+
+void FallingCubes(int start, int finish, int threadNumber, std::vector<Object> objectPool)
 {
 	std::vector<Object> objects;
-	std::vector<Object> objectPool;
 
 	if (!config.doThreading)
 	{
 		start = 0;
 		finish = config.totFrames;
-	}
 
-	for (int i = 0; i < 10; i++)
-	{
-		for (int j = 0; j < 10; j++)
-		{
-			objects.push_back(Object(Vec3f(i * 15, -50 + (rand() % 50), ORIGIN.z - j * 15), Cube, ObjectDetails(5, 5, 5, 5), Vec3f(1, 0.64, 0.0), 0, 0, Vec3f(1, 0.64, 0.0)));
-		}
+		objects = GetCubes();
 	}
 
 	for (float r = start; r <= config.totFrames && r <= finish; r++)
 	{
 		for (int i = 0; i < objectPool.size(); i++)
 		{
-			objects.push_back(Object(objectPool[i]));
-			objects.push_back(Object(Vec3f(objectPool[i].center.x, objectPool[i].center.y - ((r / config.totFrames) * (0.1 * config.movementSpeed)), 
+			objects.push_back(Object(Vec3f(objectPool[i].center.x, objectPool[i].center.y - ((r / config.totFrames) * (config.movementSpeed)), 
 				objectPool[i].center.z), objectPool[i].objectType, objectPool[i].objectDetails, objectPool[i].surfaceColor, 
 				objectPool[i].reflection, objectPool[i].transparency, objectPool[i].emissionColor));
 		}
@@ -594,12 +612,17 @@ void FallingCubes(int start, int finish, int threadNumber)
 	}
 }
 
-
 void DoThreading()
 {
 	std::thread threadPool[num_threads];
+	std::vector<Object> objectPool;
 
 	int difference = (config.totFrames) / num_threads;
+
+	if (!config.solarSystem)
+	{
+		objectPool = GetCubes();
+	}
 
 	for (int i = 0; i < num_threads; ++i)
 	{
@@ -609,7 +632,7 @@ void DoThreading()
 		}
 		else 
 		{
-			threadPool[i] = std::thread(FallingCubes, i * difference, i * difference + difference, i);
+			threadPool[i] = std::thread(FallingCubes, i * difference, i * difference + difference, i, objectPool);
 		}
 	}
 
@@ -778,7 +801,8 @@ int main(int argc, char **argv)
 		}
 		else 
 		{
-			FallingCubes(0, 0, 0);
+			std::vector<Object> objectPool;
+			FallingCubes(0, 0, 0, objectPool);
 		}
 	}
 

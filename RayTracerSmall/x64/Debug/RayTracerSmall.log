@@ -1,46 +1,49 @@
 ﻿  main.cpp
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(208): warning C4005: 'INFINITY': macro redefinition
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(211): warning C4005: 'INFINITY': macro redefinition
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\math.h(78): note: see previous definition of 'INFINITY'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(283): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(296): warning C4305: 'argument': truncation from 'double' to 'const float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(310): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(379): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(386): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(387): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(480): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(486): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(489): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(501): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(501): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(505): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(505): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(288): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(301): warning C4305: 'argument': truncation from 'double' to 'const float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(315): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(384): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(391): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(392): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(485): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(491): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(494): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(506): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(509): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(506): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(510): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(518): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(518): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(519): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(522): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(522): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(510): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(511): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(514): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(515): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(523): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(523): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(526): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(526): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(524): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(527): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(535): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(535): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(536): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(539): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(539): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(527): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(528): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(531): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(531): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(532): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(540): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(544): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(548): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(563): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(570): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(570): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(574): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(586): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(540): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(541): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(544): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(544): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(545): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(549): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(553): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(567): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(573): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(573): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(578): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(584): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(590): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(602): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(709): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(594): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(606): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(622): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(622): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(723): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\x64\Debug\RayTracerSmall.exe
   RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\x64\Debug\RayTracerSmall.pdb (Full PDB)
