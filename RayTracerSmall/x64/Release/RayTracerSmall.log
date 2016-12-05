@@ -34,14 +34,14 @@ main.cpp(544): warning C4244: 'argument': conversion from 'double' to 'float', p
 main.cpp(545): warning C4305: 'argument': truncation from 'double' to 'float'
 main.cpp(549): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 main.cpp(553): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(570): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(573): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(589): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-main.cpp(594): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-main.cpp(605): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(609): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(621): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-main.cpp(733): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+main.cpp(569): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(572): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(588): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+main.cpp(593): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+main.cpp(604): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(608): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(620): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+main.cpp(732): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Generating code
   17 of 804 functions ( 2.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
