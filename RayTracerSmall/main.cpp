@@ -20,8 +20,7 @@
 // Threading
 #include <thread>
 
-// Mutex
-#include <mutex>
+#pragma region Classes / Structs / Enums
 
 template<typename T>
 class Vec3
@@ -64,11 +63,13 @@ typedef Vec3<float> Vec3f;
 
 enum ObjectType { Sphere, Cube };
 
+enum Axis { XAxis, YAxis, ZAxis };
+
 class ObjectDetails {
 public:
 	float radius = 0;
 	float radius2; // Radius ^2
-	float depth = 0; 
+	float depth = 0;
 	float height = 0;
 	float width = 0;
 
@@ -201,7 +202,7 @@ struct DriverInfo {
 	float totFrames;
 };
 
-DriverInfo config;
+#pragma endregion
 
 #if defined __linux__ || defined __APPLE__
 // "Compiled for Linux
@@ -211,7 +212,7 @@ DriverInfo config;
 #define INFINITY 1e8
 #endif
 
-enum Axis { XAxis, YAxis, ZAxis };
+// Location of the sun
 const Vec3f ORIGIN = Vec3f(0.0, 0, -300);
 
 // Start and end timers
@@ -222,7 +223,8 @@ std::chrono::duration<double> total_elapsed_time;
 // Thead pool
 static const int num_threads = 10;
 
-std::mutex m;
+// Program config
+DriverInfo config;
 
 float mix(const float &a, const float &b, const float &mix)
 {
@@ -475,6 +477,27 @@ Vec3f rotate_point(Vec3f o, float angle, Vec3f p, Axis axis)
 	return p;
 }
 
+std::vector<Object> GetCubes()
+{
+	std::vector<Object> objectPool;
+
+	for (int i = -2; i < 2; i++)
+	{
+		for (int j = -3; j < 3; j++)
+		{
+			objectPool.push_back(Object(
+				Vec3f(i * 15, (rand() % 50), -100 - j * 15),
+				Cube,
+				ObjectDetails(5, 5, 5, 5),
+				Vec3f(0.63, 0.90, 0.94),
+				1,
+				0));
+		}
+	}
+
+	return objectPool;
+}
+
 void SolarSystem(int start, int finish, int threadNumber)
 {
 	std::vector<Object> objects;
@@ -491,7 +514,7 @@ void SolarSystem(int start, int finish, int threadNumber)
 	for (float r = start; r <= config.totFrames && r <= finish; r++)
 	{
 		// Sun
-		objects.push_back(Object(ORIGIN, Sphere, ObjectDetails(15, 15, 15, 15), Vec3f(1, 0.64, 0.0), 0, 0, Vec3f(1, 0.64, 0.0)));
+		objects.push_back(Object(ORIGIN, Sphere, ObjectDetails(15, 15, 15, 15), Vec3f(1, 0.64, 0.0), 1, 0, Vec3f(1, 0.64, 0.0)));
 
 		/*
 		How to use rotate_point:
@@ -529,13 +552,8 @@ void SolarSystem(int start, int finish, int threadNumber)
 
 		// Saturn
 		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (0.323 * config.movementSpeed)), Vec3f(-90.00, 0.32, ORIGIN.z), YAxis);
-		Object saturn = Object(newPos, Sphere, ObjectDetails(8, 8, 8, 8), Vec3f(0.76, 0.69, 0.50), 1, 0);
-		objects.push_back(saturn);
+		objects.push_back(Object(newPos, Sphere, ObjectDetails(8, 8, 8, 8), Vec3f(0.76, 0.69, 0.50), 1, 0));
 
-		// Saturns ring
-		newPos = rotate_point(saturn.center, ((r / config.totFrames) * (5 * config.movementSpeed)), Vec3f(saturn.center.x, saturn.center.y, saturn.center.z + 5), YAxis);
-		objects.push_back(Object(newPos, Sphere, ObjectDetails(1, 1, 1, 1), Vec3f(0.75, 0.75, 0.75), 1, 0));
-		
 		// Uranus
 		newPos = rotate_point(ORIGIN, ((r / config.totFrames) * (0.228 * config.movementSpeed)), Vec3f(0, 0.32, ORIGIN.z + 110), YAxis);
 		objects.push_back(Object(newPos, Sphere, ObjectDetails(5, 5, 5, 5), Vec3f(0.52, 0.80, 0.98), 1, 0));
@@ -557,27 +575,6 @@ void SolarSystem(int start, int finish, int threadNumber)
 	}
 }
 
-std::vector<Object> GetCubes()
-{
-	std::vector<Object> objectPool;
-
-	for (int i = -2; i < 2; i++)
-	{
-		for (int j = -3; j < 3; j++)
-		{
-			objectPool.push_back(Object(
-				Vec3f(i * 15, (rand() % 50), -100 - j * 15),
-				Cube,
-				ObjectDetails(5, 5, 5, 5),
-				Vec3f(0.63, 0.90, 0.94), 
-				1, 
-				0));
-		}
-	}
-
-	return objectPool;
-}
-
 void FallingCubes(int start, int finish, int threadNumber, std::vector<Object> objectPool)
 {
 	std::vector<Object> objects;
@@ -594,8 +591,8 @@ void FallingCubes(int start, int finish, int threadNumber, std::vector<Object> o
 	{
 		for (int i = 0; i < objectPool.size(); i++)
 		{
-			objects.push_back(Object(Vec3f(objectPool[i].center.x, objectPool[i].center.y - ((r / config.totFrames) * (config.movementSpeed)), 
-				objectPool[i].center.z), objectPool[i].objectType, objectPool[i].objectDetails, objectPool[i].surfaceColor, 
+			objects.push_back(Object(Vec3f(objectPool[i].center.x, objectPool[i].center.y - ((r / config.totFrames) * (config.movementSpeed)),
+				objectPool[i].center.z), objectPool[i].objectType, objectPool[i].objectDetails, objectPool[i].surfaceColor,
 				objectPool[i].reflection, objectPool[i].transparency, objectPool[i].emissionColor));
 		}
 
@@ -630,7 +627,7 @@ void DoThreading()
 		{
 			threadPool[i] = std::thread(SolarSystem, i * difference, i * difference + difference, i);
 		}
-		else 
+		else
 		{
 			threadPool[i] = std::thread(FallingCubes, i * difference, i * difference + difference, i, objectPool);
 		}
@@ -673,7 +670,7 @@ void CreateFolder()
 	std::stringstream ss;
 	ss << "./" << config.folderName;
 
-	if (!fs::exists(ss.str().c_str())) // Check if temp folder exists
+	if (!fs::exists(ss.str().c_str())) // Check if temp folder doesn't exist
 	{
 		fs::create_directory(ss.str().c_str()); // Create temp folder
 	}
@@ -799,7 +796,7 @@ int main(int argc, char **argv)
 		{
 			SolarSystem(0, 0, 0);
 		}
-		else 
+		else
 		{
 			std::vector<Object> objectPool;
 			FallingCubes(0, 0, 0, objectPool);
