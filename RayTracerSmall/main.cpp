@@ -432,6 +432,96 @@ void render(const std::vector<Object> &objects, int iteration, int threadNumber)
 	}
 }
 
+void RenderThreadedFunction(Vec3f *pixel, const std::vector<Object> &objects, int width, float startY, float endY, float invWidth, float invHeight, float angle, float aspectratio)
+{
+	for (unsigned y = startY; y < endY; y++)
+	{
+		for (unsigned x = 0; x < width; ++x)
+		{
+			float xx = (2 * ((x + 0.5) * invWidth) - 1) * angle * aspectratio;
+			float yy = (1 - 2 * ((y + 0.5) * invHeight)) * angle;
+
+			Vec3f raydir(xx, yy, -1);
+			raydir.normalize();
+
+			*(pixel +  ((y * width) + x)) = trace(Vec3f(0, 20, 0), raydir, objects, 0); // The Vec3f on this line is where the camera is positioned
+		}
+	}
+}
+
+//[comment]
+// Main rendering function. We compute a camera ray for each pixel of the image
+// trace it and return a color. If the ray hits a object, we return the color of the
+// object at the intersection point, else we return the background color.
+//[/comment]
+void renderThreaded(const std::vector<Object> &objects, int iteration, int threadNumber)
+{
+	start = std::chrono::system_clock::now();
+
+#ifdef _DEBUG 
+	// Recommended Testing Resolution
+	unsigned width = 640, height = 480;
+#else
+	// Recommended Production Resolution
+	//unsigned width = 1920, height = 1080;
+	unsigned width = 640, height = 480;
+#endif
+
+	Vec3f *image = new Vec3f[width * height], *pixel = image;
+	float invWidth = 1 / float(width), invHeight = 1 / float(height);
+	float fov = 30, aspectratio = width / float(height);
+	float angle = tan(M_PI * 0.5 * fov / 180.);
+
+	std::thread threadPool[num_threads];
+	int difference = height / num_threads;
+	int count = 0;
+
+	// Trace rays
+	for (unsigned y = 0; y < height; y += difference, count++)
+	{
+		threadPool[count] = std::thread(RenderThreadedFunction, pixel, objects, width,
+			y, y + difference, invWidth, invHeight, angle, aspectratio);
+	}
+
+	//Join the threads with the main thread
+	for (int i = 0; i < num_threads; ++i)
+	{
+		threadPool[i].join();
+	}
+
+	// Save result to a PPM image (keep these flags if you compile under Windows)
+	std::stringstream ss;
+	ss << "./" << config.folderName << "/objects" << iteration << ".ppm";
+	std::string tempString = ss.str();
+	char* filename = (char*)tempString.c_str();
+
+	std::ofstream ofs(filename, std::ios::out | std::ios::binary);
+	ofs << "P6\n" << width << " " << height << "\n255\n";
+
+	for (unsigned i = 0; i < width * height; ++i)
+	{
+		ofs << (unsigned char)(std::min(float(1), image[i].x) * 255) <<
+			(unsigned char)(std::min(float(1), image[i].y) * 255) <<
+			(unsigned char)(std::min(float(1), image[i].z) * 255);
+	}
+
+	ofs.close();
+	delete[] image;
+
+	end = std::chrono::system_clock::now();
+	std::chrono::duration<double> elapsed_time = end - start;
+	total_elapsed_time += elapsed_time;
+
+	if (threadNumber != 0)
+	{
+		std::cout << "Finished image render #" << iteration << " in " << elapsed_time.count() << " on thread: " << threadNumber << std::endl;
+	}
+	else
+	{
+		std::cout << "Finished image render #" << iteration << " in " << elapsed_time.count() << std::endl;
+	}
+}
+
 Vec3f rotate_point(Vec3f o, float angle, Vec3f p, Axis axis)
 {
 	float s = sin(angle);
@@ -564,11 +654,11 @@ void SolarSystem(int start, int finish, int threadNumber)
 
 		if (config.doThreading)
 		{
-			render(objects, r, threadNumber);
+			renderThreaded(objects, r, threadNumber);
 		}
 		else
 		{
-			render(objects, r, 0);
+			renderThreaded(objects, r, 0);
 		}
 
 		objects.clear();
