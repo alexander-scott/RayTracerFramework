@@ -1,5 +1,4 @@
 doThreading: 1
-optimise: 1
 solarSystem: 1
 framerate: 30
 width: 640

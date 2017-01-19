@@ -1,111 +1,49 @@
 ﻿  main.cpp
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(213): warning C4005: 'INFINITY': macro redefinition
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(211): warning C4005: 'INFINITY': macro redefinition
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\math.h(78): note: see previous definition of 'INFINITY'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(304): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(317): warning C4305: 'argument': truncation from 'double' to 'const float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(331): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(381): warning C4244: 'initializing': conversion from 'float' to 'unsigned int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(383): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(385): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(386): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(408): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(435): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(436): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(532): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(535): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(551): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(557): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(560): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(572): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(572): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(576): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(576): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(577): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(580): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(581): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(589): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(589): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(590): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(593): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(593): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(594): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(597): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(597): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(598): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(601): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(601): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(602): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(605): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(605): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(606): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(610): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(614): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(628): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(633): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(644): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(648): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(660): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(788): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-e:\programs\microsoft visual studio 14.0\vc\include\type_traits(1376): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-  e:\programs\microsoft visual studio 14.0\vc\include\type_traits(1444): note: see reference to function template instantiation 'void std::_Invoker_functor::_Call<void(__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3<float>*,std::vector<_Ty,std::allocator<_Ty>>,unsigned int,unsigned int,unsigned int,float,float,float,float>(_Callable &&,Vec3<float> *&&,std::vector<_Ty,std::allocator<_Ty>> &&,unsigned int &&,unsigned int &&,unsigned int &&,float &&,float &&,float &&,float &&)' being compiled
-          with
-          [
-              _Ty=Object,
-              _Callable=void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float)
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\thr\xthread(240): note: see reference to function template instantiation 'void std::invoke<void(__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3<float>*,std::vector<_Ty,std::allocator<_Ty>>,unsigned int,unsigned int,unsigned int,float,float,float,float>(_Callable &&,Vec3<float> *&&,std::vector<_Ty,std::allocator<_Ty>> &&,unsigned int &&,unsigned int &&,unsigned int &&,float &&,float &&,float &&,float &&)' being compiled
-          with
-          [
-              _Ty=Object,
-              _Callable=void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float)
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\thr\xthread(249): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Execute<0,1,2,3,4,5,6,7,8,9>(std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<_Ty,std::allocator<_Ty>>,unsigned int,unsigned int,unsigned int,float,float,float,float> &,std::integer_sequence<unsigned __int64,0,1,2,3,4,5,6,7,8,9>)' being compiled
-          with
-          [
-              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>,std::default_delete<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>>>,
-              _Ty=Object
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\thr\xthread(247): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Execute<0,1,2,3,4,5,6,7,8,9>(std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<_Ty,std::allocator<_Ty>>,unsigned int,unsigned int,unsigned int,float,float,float,float> &,std::integer_sequence<unsigned __int64,0,1,2,3,4,5,6,7,8,9>)' being compiled
-          with
-          [
-              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>,std::default_delete<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>>>,
-              _Ty=Object
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\thr\xthread(244): note: while compiling class template member function 'void std::_LaunchPad<_Target>::_Run(std::_LaunchPad<_Target> *) noexcept'
-          with
-          [
-              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>,std::default_delete<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>>>
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\thr\xthread(232): note: see reference to function template instantiation 'void std::_LaunchPad<_Target>::_Run(std::_LaunchPad<_Target> *) noexcept' being compiled
-          with
-          [
-              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>,std::default_delete<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>>>
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\thr\xthread(259): note: see reference to class template instantiation 'std::_LaunchPad<_Target>' being compiled
-          with
-          [
-              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>,std::default_delete<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>>>
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\thread(50): note: see reference to function template instantiation 'void std::_Launch<std::unique_ptr<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<_Ty,std::allocator<_Ty>>,unsigned int,unsigned int,unsigned int,float,float,float,float>,std::default_delete<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<_Ty,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<_Ty,std::allocator<_Ty>>,unsigned int,unsigned int,unsigned int,float,float,float,float>>>>(_Thrd_t *,_Target &&)' being compiled
-          with
-          [
-              _Ty=Object,
-              _Target=std::unique_ptr<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>,std::default_delete<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>>>
-          ]
-  c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(419): note: see reference to function template instantiation 'std::thread::thread<void(__cdecl &)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3f*&,const std::vector<_Ty,std::allocator<_Ty>>&,unsigned int&,unsigned int&,unsigned int,float&,float&,float&,float&,void>(_Fn,Vec3f *&,const std::vector<_Ty,std::allocator<_Ty>> &,unsigned int &,unsigned int &,unsigned int &&,float &,float &,float &,float &)' being compiled
-          with
-          [
-              _Ty=Object,
-              _Fn=void (__cdecl &)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float)
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\chrono(208): note: see reference to class template instantiation 'std::chrono::duration_values<_Rep>' being compiled
-          with
-          [
-              _Rep=std::chrono::system_clock::rep
-          ]
-  e:\programs\microsoft visual studio 14.0\vc\include\chrono(207): note: while compiling class template member function 'std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period> std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period>::zero(void)'
-  e:\programs\microsoft visual studio 14.0\vc\include\chrono(237): note: see reference to function template instantiation 'std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period> std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period>::zero(void)' being compiled
-  e:\programs\microsoft visual studio 14.0\vc\include\chrono(231): note: see reference to class template instantiation 'std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period>' being compiled
-  e:\programs\microsoft visual studio 14.0\vc\include\chrono(973): note: see reference to class template instantiation 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>' being compiled
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(288): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(301): warning C4305: 'argument': truncation from 'double' to 'const float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(315): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(384): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(391): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(392): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(485): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(491): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(494): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(506): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(506): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(510): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(510): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(511): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(514): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(515): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(523): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(523): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(524): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(527): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(527): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(528): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(531): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(531): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(532): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(540): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(540): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(541): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(544): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(544): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(545): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(549): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(553): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(567): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(573): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(573): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(578): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(584): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(590): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(594): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(606): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(622): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(622): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alexo\documents\dropbox\university year 3\low level game programming\raytracerframework\raytracersmall\main.cpp(723): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\x64\Debug\RayTracerSmall.exe
   RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\x64\Debug\RayTracerSmall.pdb (Full PDB)
