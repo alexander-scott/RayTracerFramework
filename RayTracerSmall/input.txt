@@ -1,9 +1,11 @@
 doThreading: 1
-solarSystem: 1
-framerate: 30
-width: 640
-height: 480
-duration: 5
+optimise: 0
+solarSystem: 0
+framerate: 60
+
+duration: 10
 maxRayDepth: 5
+
 folderName: Temp
-movementSpeed: 10
+
+movementSpeed: 8

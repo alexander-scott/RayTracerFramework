@@ -190,6 +190,7 @@ public:
 
 struct DriverInfo {
 	bool doThreading; // If true the code will go down the threading route
+	bool optimise; // If true the code will go down the route with screen space subdivision
 	bool solarSystem; // If true the solar system scene will be displayed
 	float framerate; // The frames per second of the video
 	int width;
@@ -218,6 +219,8 @@ const Vec3f ORIGIN = Vec3f(0.0, 0, -300);
 // Start and end timers
 std::chrono::time_point<std::chrono::system_clock> start;
 std::chrono::time_point<std::chrono::system_clock> end;
+std::chrono::time_point<std::chrono::system_clock> programStart;
+std::chrono::time_point<std::chrono::system_clock> programComplete;
 std::chrono::duration<double> total_elapsed_time;
 
 // Thead pool
@@ -362,12 +365,29 @@ Vec3f trace(
 	return surfaceColor + object->emissionColor;
 }
 
+void RenderThreadedFunction(Vec3f *pixel, const std::vector<Object> &objects, int width, float startY, float endY, float invWidth, float invHeight, float angle, float aspectratio)
+{
+	for (unsigned y = startY; y < endY; y++)
+	{
+		for (unsigned x = 0; x < width; ++x)
+		{
+			float xx = (2 * ((x + 0.5) * invWidth) - 1) * angle * aspectratio;
+			float yy = (1 - 2 * ((y + 0.5) * invHeight)) * angle;
+
+			Vec3f raydir(xx, yy, -1);
+			raydir.normalize();
+
+			*(pixel + ((y * width) + x)) = trace(Vec3f(0, 20, 0), raydir, objects, 0); 
+		}
+	}
+}
+
 //[comment]
 // Main rendering function. We compute a camera ray for each pixel of the image
 // trace it and return a color. If the ray hits a object, we return the color of the
 // object at the intersection point, else we return the background color.
 //[/comment]
-void render(const std::vector<Object> &objects, int iteration, int threadNumber)
+void RenderPixels(const std::vector<Object> &objects, int iteration, int threadNumber, std::thread threadPool[2])
 {
 	start = std::chrono::system_clock::now();
 
@@ -376,8 +396,7 @@ void render(const std::vector<Object> &objects, int iteration, int threadNumber)
 	unsigned width = 640, height = 480;
 #else
 	// Recommended Production Resolution
-	//unsigned width = 1920, height = 1080;
-	unsigned width = 640, height = 480;
+	unsigned width = 1920, height = 1080;
 #endif
 
 	Vec3f *image = new Vec3f[width * height], *pixel = image;
@@ -385,17 +404,39 @@ void render(const std::vector<Object> &objects, int iteration, int threadNumber)
 	float fov = 30, aspectratio = width / float(height);
 	float angle = tan(M_PI * 0.5 * fov / 180.);
 
-	// Trace rays
-	for (unsigned y = 0; y < height; ++y)
+	if (config.optimise)
 	{
-		for (unsigned x = 0; x < width; ++x, ++pixel)
-		{
-			float xx = (2 * ((x + 0.5) * invWidth) - 1) * angle * aspectratio;
-			float yy = (1 - 2 * ((y + 0.5) * invHeight)) * angle;
+		int difference = height / 2;
+		int count = 0;
 
-			Vec3f raydir(xx, yy, -1);
-			raydir.normalize();
-			*pixel = trace(Vec3f(0, 20, 0), raydir, objects, 0); // The Vec3f on this line is where the camera is positioned
+		// Trace rays on two different threads. One for the top half of the screen the other for the bottom half.
+		for (unsigned y = 0; y < height; y += difference, count++)
+		{
+			threadPool[count] = std::thread(RenderThreadedFunction, pixel, objects, width,
+				y, y + difference, invWidth, invHeight, angle, aspectratio);
+		}
+
+		//Join the threads with the main thread
+		for (int i = 0; i < 2; ++i)
+		{
+			threadPool[i].join();
+		}
+	}
+	else
+	{
+		// Trace rays
+		for (unsigned y = 0; y < height; ++y)
+		{
+			for (unsigned x = 0; x < width; ++x, ++pixel)
+			{
+				float xx = (2 * ((x + 0.5) * invWidth) - 1) * angle * aspectratio;
+				float yy = (1 - 2 * ((y + 0.5) * invHeight)) * angle;
+
+				Vec3f raydir(xx, yy, -1);
+				raydir.normalize();
+
+				*pixel = trace(Vec3f(0, 20, 0), raydir, objects, 0); // The Vec3f on this line is where the camera is positioned
+			}
 		}
 	}
 
@@ -508,6 +549,8 @@ void SolarSystem(int start, int finish, int threadNumber)
 		finish = config.totFrames;
 	}
 
+	std::thread optimisationThreadPool[2];
+
 	// OBJECT DEFINITION
 	// (POSITION, TYPE, DETAILS(RADIUS, DEPTH, HEIGHT, WIDTH), SURFACECOLOUR(R, G, B), REFLECTION, TRANSPARENCY, EMISSIONCOLOUR)
 
@@ -564,11 +607,11 @@ void SolarSystem(int start, int finish, int threadNumber)
 
 		if (config.doThreading)
 		{
-			render(objects, r, threadNumber);
+			RenderPixels(objects, r, threadNumber, optimisationThreadPool);
 		}
 		else
 		{
-			render(objects, r, 0);
+			RenderPixels(objects, r, 0, optimisationThreadPool);
 		}
 
 		objects.clear();
@@ -584,13 +627,16 @@ void FallingCubes(int start, int finish, int threadNumber, std::vector<Object> o
 		start = 0;
 		finish = config.totFrames;
 
-		objects = GetCubes();
+		objects = GetCubes(); // Get a vector of random cube positions
 	}
+
+	std::thread optimisationThreadPool[2]; // Threads used for the screen-space subdivision optimisation
 
 	for (float r = start; r <= config.totFrames && r <= finish; r++)
 	{
 		for (int i = 0; i < objectPool.size(); i++)
 		{
+			// Slowly decrease each objects Y position over the frames
 			objects.push_back(Object(Vec3f(objectPool[i].center.x, objectPool[i].center.y - ((r / config.totFrames) * (config.movementSpeed)),
 				objectPool[i].center.z), objectPool[i].objectType, objectPool[i].objectDetails, objectPool[i].surfaceColor,
 				objectPool[i].reflection, objectPool[i].transparency, objectPool[i].emissionColor));
@@ -598,11 +644,11 @@ void FallingCubes(int start, int finish, int threadNumber, std::vector<Object> o
 
 		if (config.doThreading)
 		{
-			render(objects, r, threadNumber);
+			RenderPixels(objects, r, threadNumber, optimisationThreadPool);
 		}
 		else
 		{
-			render(objects, r, 0);
+			RenderPixels(objects, r, 0, optimisationThreadPool);
 		}
 
 		objects.clear();
@@ -653,12 +699,15 @@ void CreateVideo()
 
 	std::chrono::duration<double> elapsed_time = end - start;
 	total_elapsed_time += elapsed_time;
+
+	std::chrono::duration<double> elapsed_time_full = end - programStart;
+
 	std::time_t end_time = std::chrono::system_clock::to_time_t(end);
 	std::cout << "**********************" << std::endl;
 	std::cout << "Finished video render in " << elapsed_time.count() << std::endl;
 	std::cout << "**********************" << std::endl;
 	std::cout << "**********************" << std::endl;
-	std::cout << "Total Render Time: " << total_elapsed_time.count() << std::endl;
+	std::cout << "Total Render Time: " << elapsed_time_full.count() << std::endl;
 	std::cout << "**********************" << std::endl;
 
 	system("out.mp4");
@@ -707,6 +756,19 @@ void GetConfig()
 			else
 			{
 				config.doThreading = false;
+			}
+		}
+		else if (line.compare(0, 8, "optimise") == 0)
+		{
+			line.erase(0, 10);
+			int opt = std::stoi(line);
+			if (opt == 1)
+			{
+				config.optimise = true;
+			}
+			else
+			{
+				config.optimise = false;
 			}
 		}
 		else if (line.compare(0, 11, "solarSystem") == 0)
@@ -782,24 +844,26 @@ int main(int argc, char **argv)
 	// This sample only allows one choice per program execution. Feel free to improve upon this
 	srand(13);
 
+	programStart = std::chrono::system_clock::now();
+
 	GetConfig();
 
 	CreateFolder();
 
-	if (config.doThreading)
+	if (config.doThreading) 
 	{
-		DoThreading();
+		DoThreading(); // Run the scenes on multiple threads, managed in the DoThreading() function
 	}
 	else
 	{
-		if (config.solarSystem)
+		if (config.solarSystem) 
 		{
-			SolarSystem(0, 0, 0);
+			SolarSystem(0, 0, 0); // Run the solar system scene without using any threads
 		}
 		else
 		{
 			std::vector<Object> objectPool;
-			FallingCubes(0, 0, 0, objectPool);
+			FallingCubes(0, 0, 0, objectPool); // Run the falling cubes scene without using any threads
 		}
 	}
 
