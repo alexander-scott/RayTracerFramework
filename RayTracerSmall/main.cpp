@@ -220,7 +220,6 @@ const Vec3f ORIGIN = Vec3f(0.0, 0, -300);
 std::chrono::time_point<std::chrono::system_clock> start;
 std::chrono::time_point<std::chrono::system_clock> end;
 std::chrono::time_point<std::chrono::system_clock> programStart;
-std::chrono::time_point<std::chrono::system_clock> programComplete;
 std::chrono::duration<double> total_elapsed_time;
 
 // Thead pool
@@ -834,11 +833,6 @@ void GetConfig()
 	config.totFrames = config.framerate * config.duration;
 }
 
-//[comment]
-// In the main function, we will create the scene which is composed of 5 objects
-// and 1 light (which is also a objects). Then, once the scene description is complete
-// we render that scene, by calling the render() function.
-//[/comment]
 int main(int argc, char **argv)
 {
 	// This sample only allows one choice per program execution. Feel free to improve upon this
@@ -868,7 +862,7 @@ int main(int argc, char **argv)
 	}
 
 #ifdef _DEBUG
-	CreateVideo(); // Remove this later
+	// If we're debugging through our code we don't want to create a video
 #else
 	CreateVideo();
 #endif 

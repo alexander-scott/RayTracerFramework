@@ -1,9 +1,9 @@
 doThreading: 1
 optimise: 0
-solarSystem: 0
+solarSystem: 1
 framerate: 60
 
-duration: 10
+duration: 5
 maxRayDepth: 5
 
 folderName: Temp

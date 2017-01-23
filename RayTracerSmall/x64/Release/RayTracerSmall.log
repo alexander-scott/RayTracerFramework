@@ -1,51 +1,51 @@
 ﻿  main.cpp
 main.cpp(213): warning C4005: 'INFINITY': macro redefinition
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(78): note: see previous definition of 'INFINITY'
-main.cpp(293): warning C4305: 'initializing': truncation from 'double' to 'float'
-main.cpp(306): warning C4305: 'argument': truncation from 'double' to 'const float'
-main.cpp(320): warning C4305: 'initializing': truncation from 'double' to 'float'
-main.cpp(370): warning C4244: 'initializing': conversion from 'float' to 'unsigned int', possible loss of data
-main.cpp(372): warning C4018: '<': signed/unsigned mismatch
+main.cpp(292): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(305): warning C4305: 'argument': truncation from 'double' to 'const float'
+main.cpp(319): warning C4305: 'initializing': truncation from 'double' to 'float'
+main.cpp(369): warning C4244: 'initializing': conversion from 'float' to 'unsigned int', possible loss of data
+main.cpp(371): warning C4018: '<': signed/unsigned mismatch
+main.cpp(373): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 main.cpp(374): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(375): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(405): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(404): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(431): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 main.cpp(432): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(433): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(530): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-main.cpp(533): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(549): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-main.cpp(557): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-main.cpp(560): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(572): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(572): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(529): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+main.cpp(532): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(548): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+main.cpp(556): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+main.cpp(559): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(571): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(571): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(575): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(575): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 main.cpp(576): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(576): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-main.cpp(577): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(579): warning C4305: 'argument': truncation from 'double' to 'float'
 main.cpp(580): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(581): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(589): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(588): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(588): warning C4305: 'argument': truncation from 'double' to 'float'
 main.cpp(589): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(590): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(592): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(592): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 main.cpp(593): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(593): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-main.cpp(594): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(596): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(596): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 main.cpp(597): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(597): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-main.cpp(598): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(600): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(600): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 main.cpp(601): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(601): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-main.cpp(602): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(604): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(604): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 main.cpp(605): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(605): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-main.cpp(606): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(610): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(614): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(628): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-main.cpp(635): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-main.cpp(647): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(651): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-main.cpp(663): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-main.cpp(791): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+main.cpp(609): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(613): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(627): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+main.cpp(634): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+main.cpp(646): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(650): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+main.cpp(662): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+main.cpp(790): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 E:\Programs\Microsoft Visual Studio 14.0\VC\include\type_traits(1376): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
   E:\Programs\Microsoft Visual Studio 14.0\VC\include\type_traits(1444): note: see reference to function template instantiation 'void std::_Invoker_functor::_Call<void(__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3<float>*,std::vector<_Ty,std::allocator<_Ty>>,unsigned int,unsigned int,unsigned int,float,float,float,float>(_Callable &&,Vec3<float> *&&,std::vector<_Ty,std::allocator<_Ty>> &&,unsigned int &&,unsigned int &&,unsigned int &&,float &&,float &&,float &&,float &&)' being compiled
           with
@@ -92,7 +92,7 @@ E:\Programs\Microsoft Visual Studio 14.0\VC\include\type_traits(1376): warning C
               _Ty=Object,
               _Target=std::unique_ptr<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>,std::default_delete<std::tuple<void (__cdecl *)(Vec3f *,const std::vector<Object,std::allocator<Object>> &,int,float,float,float,float,float,float),Vec3f *,std::vector<Object,std::allocator<Object>>,unsigned int,unsigned int,unsigned int,float,float,float,float>>>
           ]
-  main.cpp(416): note: see reference to function template instantiation 'std::thread::thread<void(__cdecl &)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3f*&,const std::vector<_Ty,std::allocator<_Ty>>&,unsigned int&,unsigned int&,unsigned int,float&,float&,float&,float&,void>(_Fn,Vec3f *&,const std::vector<_Ty,std::allocator<_Ty>> &,unsigned int &,unsigned int &,unsigned int &&,float &,float &,float &,float &)' being compiled
+  main.cpp(415): note: see reference to function template instantiation 'std::thread::thread<void(__cdecl &)(Vec3f *,const std::vector<Object,std::allocator<_Ty>> &,int,float,float,float,float,float,float),Vec3f*&,const std::vector<_Ty,std::allocator<_Ty>>&,unsigned int&,unsigned int&,unsigned int,float&,float&,float&,float&,void>(_Fn,Vec3f *&,const std::vector<_Ty,std::allocator<_Ty>> &,unsigned int &,unsigned int &,unsigned int &&,float &,float &,float &,float &)' being compiled
           with
           [
               _Ty=Object,
@@ -108,9 +108,9 @@ E:\Programs\Microsoft Visual Studio 14.0\VC\include\type_traits(1376): warning C
   E:\Programs\Microsoft Visual Studio 14.0\VC\include\chrono(231): note: see reference to class template instantiation 'std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period>' being compiled
   E:\Programs\Microsoft Visual Studio 14.0\VC\include\chrono(973): note: see reference to class template instantiation 'std::chrono::time_point<std::chrono::system_clock,std::chrono::system_clock::duration>' being compiled
   Generating code
-  16 of 871 functions ( 1.8%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  868 of 871 functions (99.7%) were compiled, the rest were copied from previous compilation.
+    3 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\x64\Release\RayTracerSmall.exe
   RayTracerSmall.vcxproj -> C:\Users\alexo\Documents\Dropbox\University Year 3\LOW LEVEL GAME PROGRAMMING\RayTracerFramework\x64\Release\RayTracerSmall.pdb (Full PDB)
